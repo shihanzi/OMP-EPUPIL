@@ -150,18 +150,18 @@ namespace Csharp_student_information_system
         private void buttonFind_Click(object sender, EventArgs e)
         {
             int id = int.Parse(TextBoxID.Text);
-            SqlCommand command = new SqlCommand("SELECT `id`, `first_name`, `last_name`, `birthdate`, `gender`, `phone`, `address`, `picture` FROM `student` WHERE `id` = " + id);
+            SqlCommand command = new SqlCommand("SELECT [Id],[Firstname],[Lastname],[DOB],[Gender],[Phone],[Address],[Picture] FROM [dbo].[Students] WHERE [Id] = " + id);
 
             DataTable table = student.getStudents(command);
 
             if(table.Rows.Count > 0)
             {
-                TextBoxFname.Text = table.Rows[0]["first_name"].ToString();
-                TextBoxLname.Text = table.Rows[0]["last_name"].ToString();
-                DateTimePicker1.Value = (DateTime)table.Rows[0]["birthdate"];
+                TextBoxFname.Text = table.Rows[0]["Firstname"].ToString();
+                TextBoxLname.Text = table.Rows[0]["Lastname"].ToString();
+                DateTimePicker1.Value = (DateTime)table.Rows[0]["DOB"];
 
                 //  gender
-                if (table.Rows[0]["gender"].ToString() == "Female")
+                if (table.Rows[0]["Gender"].ToString() == "Female")
                 {
                     RadioButtonFemale.Checked = true;
                 }
@@ -170,10 +170,10 @@ namespace Csharp_student_information_system
                     RadioButtonMale.Checked = true;
                 }
 
-                TextBoxPhone.Text = table.Rows[0]["phone"].ToString();
-                TextBoxAddress.Text = table.Rows[0]["address"].ToString();
+                TextBoxPhone.Text = table.Rows[0]["Phone"].ToString();
+                TextBoxAddress.Text = table.Rows[0]["Address"].ToString();
 
-                byte[] pic = (byte[])table.Rows[0]["picture"];
+                byte[] pic = (byte[])table.Rows[0]["Picture"];
                 MemoryStream picture = new MemoryStream(pic);
                 PictureBoxStudentImage.Image = Image.FromStream(picture);
             }

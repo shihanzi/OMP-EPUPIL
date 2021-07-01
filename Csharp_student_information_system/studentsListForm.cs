@@ -24,7 +24,7 @@ namespace Csharp_student_information_system
         // on the form load -> populate the datagridview with students data
         private void studentsListForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM `student`");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Students]");
             DataGridView1.ReadOnly = true;
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             DataGridView1.RowTemplate.Height = 80;
@@ -68,7 +68,7 @@ namespace Csharp_student_information_system
         // button refresh
         private void ButtonRefresh_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM `student`");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Students]");
             
             DataGridView1.ReadOnly = true;
 
