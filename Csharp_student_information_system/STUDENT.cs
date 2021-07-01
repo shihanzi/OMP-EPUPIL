@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.IO;
+using System.Data;
+
+namespace Csharp_student_information_system
+{
+    class STUDENT
+    {
+
+        MY_DB mydb = new MY_DB();
+
+
+        //  function to insert a new student
+        public bool insertStudent(string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
+        {
+            SqlCommand command = new SqlCommand("INSERT INTO 'students'(`first_name`, `last_name`, `birthdate`,`gender`, `phone`, `address`, `picture`)" + " VALUES (@fn, @ln, @bdt, @gdr, @phn, @adrs, @pic)", mydb.getConnection);
+
+            command.Parameters.Add("@fn", System.Data.SqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@ln", System.Data.SqlDbType.VarChar).Value = lname;
+            command.Parameters.Add("@bdt", System.Data.SqlDbType.DateTime).Value = bdate;
+            command.Parameters.Add("@gdr", System.Data.SqlDbType.VarChar).Value = gender;
+            command.Parameters.Add("@phn", System.Data.SqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@adrs", System.Data.SqlDbType.VarChar).Value = address;
+            command.Parameters.Add("@pic", System.Data.SqlDbType.Image).Value = picture.ToArray();
+
+            mydb.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
+
+        // function to get all students from database
+        public DataTable getStudents(SqlCommand command)
+        {
+            command.Connection = mydb.getConnection;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+        // function to delete student by id
+        public bool deleteStudent(int id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM `students` WHERE `id` = @studentID", mydb.getConnection);
+            command.Parameters.Add("@studentID", SqlDbType.Int).Value = id;
+            mydb.openConnection();
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+
+        }
+
+        //  function to update a student information
+        public bool updateStudent(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
+        {
+            SqlCommand command = new SqlCommand("UPDATE `student` SET `first_name`=@fn,`last_name`=@ln,`birthdate`=@bdt,`gender`=@gdr,`phone`=@phn,`ad" +
+                "dress`=@adrs,`picture`=@pic WHERE id=@ID", mydb.getConnection);
+
+            command.Parameters.Add("@ID", System.Data.SqlDbType.Int).Value = id;
+            command.Parameters.Add("@fn", System.Data.SqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@ln", System.Data.SqlDbType.VarChar).Value = lname;
+            command.Parameters.Add("@bdt", System.Data.SqlDbType.DateTime).Value = bdate;
+            command.Parameters.Add("@gdr", System.Data.SqlDbType.VarChar).Value = gender;
+            command.Parameters.Add("@phn", System.Data.SqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@adrs", System.Data.SqlDbType.VarChar).Value = address;
+            command.Parameters.Add("@pic", System.Data.SqlDbType.Image).Value = picture.ToArray();
+
+            mydb.openConnection();
+
+            if ((command.ExecuteNonQuery() == 1))
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+
+        }
+
+        //  function to execute count query
+        string execCount(string query)
+        {
+            SqlCommand command = new SqlCommand(query, mydb.getConnection);
+            mydb.openConnection();
+
+            String count = command.ExecuteScalar().ToString();
+            mydb.closeConnection();
+
+            return count;
+        }
+
+        //  function to return the total students in the database
+       public string totalStudent()
+        {
+            return execCount("SELECT COUNT(*) FROM `students`");
+        }
+
+        //  function to return the total Male students in the database
+       public string totalMaleStudent()
+        {
+            return execCount("SELECT COUNT(*) FROM `students` WHERE `gender` = 'Male'");
+        }
+
+        //  function to return the total Female students in the database
+       public string totalFemaleStudent()
+        {
+            return execCount("SELECT COUNT(*) FROM `students` WHERE `gender` = 'Female'");
+        }
+
+    }
+}
