@@ -17,13 +17,13 @@ namespace Csharp_student_information_system
             InitializeComponent();
         }
 
-        //////////////////////////////////////////////////////////////
+        //\\\\\\\\\\\\\\\\\\\\\\//\\\\\\\\\\\//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
         Color panTotalColor;
         Color panMaleColor;
         Color panFemaleColor;
 
-        /////////////////////////////////////////////////////////////
+        //\\\\\\\\\\\\\\\\\\\\\\//\\\\\\\\\\\//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
         private void StaticsForm_Load(object sender, EventArgs e)
         {

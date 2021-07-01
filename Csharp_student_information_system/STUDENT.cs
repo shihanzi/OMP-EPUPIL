@@ -55,7 +55,7 @@ namespace Csharp_student_information_system
         // function to delete student by id
         public bool deleteStudent(int id)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Students] WHERE 'id' = @Id", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Students] WHERE [id] = @Id", mydb.getConnection);
             command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
             mydb.openConnection();
             if ((command.ExecuteNonQuery() == 1))
@@ -74,9 +74,9 @@ namespace Csharp_student_information_system
         //  function to update a student information
         public bool updateStudent(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
         {
-            SqlCommand command = new SqlCommand("UPDATE [dbo].[Students] SET [Firstname]=@fn,[Lastname]=@ln,[DOB]=@bdt,[Gender]=@gdr,[Phone]=@phn,[Address]=@adrs,[Picture]=@pic WHERE id=@ID", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE [dbo].[Students] SET [Firstname]=@fn,[Lastname]=@ln,[DOB]=@bdt,[Gender]=@gdr,[Phone]=@phn,[Address]=@adrs,[Picture]=@pic WHERE id=@Id", mydb.getConnection);
 
-            command.Parameters.Add("@ID", System.Data.SqlDbType.Int).Value = id;
+            command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
             command.Parameters.Add("@fn", System.Data.SqlDbType.VarChar).Value = fname;
             command.Parameters.Add("@ln", System.Data.SqlDbType.VarChar).Value = lname;
             command.Parameters.Add("@bdt", System.Data.SqlDbType.DateTime).Value = bdate;

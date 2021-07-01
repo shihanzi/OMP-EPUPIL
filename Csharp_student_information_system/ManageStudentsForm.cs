@@ -25,7 +25,7 @@ namespace Csharp_student_information_system
         // on form load populate the datagridview with students data
         private void ManageStudentsForm_Load(object sender, EventArgs e)
         {
-            fillGrid(new SqlCommand("SELECT * FROM `student`"));
+            fillGrid(new SqlCommand("SELECT * FROM [dbo].[Students]"));
         }
 
 
@@ -83,7 +83,7 @@ namespace Csharp_student_information_system
         // button search ( using mysql function -> CONCAT )
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM `student` WHERE CONCAT(`first_name`,`last_name`,`address`)LIKE'%" + TextBoxSearch.Text + "%'");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Students] WHERE CONCAT([Firstname],[Lastname],[Address])LIKE'%" + TextBoxSearch.Text + "%'");
             fillGrid(command);
         }
 
@@ -231,7 +231,7 @@ namespace Csharp_student_information_system
                     if (student.updateStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
                     {
                         MessageBox.Show("Student Information Updated", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        fillGrid(new SqlCommand("SELECT * FROM `student`"));
+                        fillGrid(new SqlCommand("SELECT * FROM [dbo].[Students]"));
                     }
                     else
                     {
@@ -265,7 +265,7 @@ namespace Csharp_student_information_system
                     if (student.deleteStudent(studentId))
                     {
                         MessageBox.Show("Student Deleted", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        fillGrid(new SqlCommand("SELECT * FROM `student`"));
+                        fillGrid(new SqlCommand("SELECT * FROM [dbo].[Students]"));
                         //  clear/reset fields after delete
                         TextBoxID.Text = "";
                         TextBoxFname.Text = "";

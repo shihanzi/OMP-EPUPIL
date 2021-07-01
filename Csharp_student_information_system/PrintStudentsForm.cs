@@ -23,7 +23,7 @@ namespace Csharp_student_information_system
 
         private void PrintStudentsForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM `student`");
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Students]");
             fillGrid(command);
 
             if(radioButtonNO.Checked)
@@ -69,15 +69,15 @@ namespace Csharp_student_information_system
 
                 if(RadioButtonMale.Checked)
                 {
-                    query = "SELECT * FROM `student` WHERE `birthdate` BETWEEN '" + date1 + "' AND '" + date2 + "' AND `gender` = 'Male'"; 
+                    query = "SELECT * FROM [dbo].[Students] WHERE [DOB] BETWEEN '" + date1 + "' AND '" + date2 + "' AND [Gender] = 'Male'"; 
                 }
                 else if(RadioButtonFemale.Checked)
                 {
-                    query = "SELECT * FROM `student` WHERE `birthdate` BETWEEN '" + date1 + "' AND '" + date2 + "' AND `gender` = 'Female'";
+                    query = "SELECT * FROM [dbo].[Students] WHERE [DOB] BETWEEN '" + date1 + "' AND '" + date2 + "' AND [Gender] = 'Female'";
                 }
                 else
                 {
-                    query = "SELECT * FROM `student` WHERE `birthdate` BETWEEN '" + date1 + "' AND '" + date2 + "'" ;
+                    query = "SELECT * [dbo].[Students] WHERE [DOB] BETWEEN '" + date1 + "' AND '" + date2 + "'" ;
                 }
 
                 command = new SqlCommand(query);
@@ -87,15 +87,15 @@ namespace Csharp_student_information_system
                 {
                     if (RadioButtonMale.Checked)
                     {
-                        query = "SELECT * FROM `student` WHERE `gender` = 'Male'";
+                        query = "SELECT * FROM [dbo].[Students] WHERE [Gender] = 'Male'";
                     }
                     else if (RadioButtonFemale.Checked)
                     {
-                        query = "SELECT * FROM `student` WHERE `gender` = 'Female'";
+                        query = "SELECT * FROM [dbo].[Students] WHERE [Gender] = 'Female'";
                     }
                     else
                     {
-                        query = "SELECT * FROM `student`";
+                        query = "SELECT * FROM [dbo].[Students]";
                     }
 
                     command = new SqlCommand(query);
@@ -105,7 +105,7 @@ namespace Csharp_student_information_system
 
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\students_list.txt" ;
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\students_list.xls";
 
                 using (var writer = new StreamWriter(path))
                 {
