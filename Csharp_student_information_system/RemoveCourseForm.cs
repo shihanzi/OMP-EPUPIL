@@ -21,14 +21,14 @@ namespace Csharp_student_information_system
         // button remove course by id
         private void ButtonRemoveCourse_Click(object sender, EventArgs e)
         {
-            COURSE course = new COURSE();
+            SUBJECTS course = new SUBJECTS();
             try
             {
                 int courseID = Convert.ToInt32(TextBoxCourseID.Text);
 
                 if ((MessageBox.Show("Are Yousure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
-                    if (course.deleteCourse(courseID))
+                    if (course.deleteSubject(courseID))
                     {
                         MessageBox.Show("Course Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

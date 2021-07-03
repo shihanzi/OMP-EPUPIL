@@ -20,7 +20,7 @@ namespace Csharp_student_information_system
         // on form load populate the datagridview with average score by course
         private void avgScoreByCourseForm_Load(object sender, EventArgs e)
         {
-            SCORE score = new SCORE();
+            MARKS score = new MARKS();
             DataGridViewAvgScore.DataSource = score.getAvgScoreByCourse();
         }
     }

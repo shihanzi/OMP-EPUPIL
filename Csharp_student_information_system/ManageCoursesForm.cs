@@ -17,7 +17,7 @@ namespace Csharp_student_information_system
             InitializeComponent();
         }
 
-        COURSE course = new COURSE();
+        SUBJECTS course = new SUBJECTS();
         int pos;
 
         // on form load populate the listbox with courses
@@ -83,7 +83,7 @@ namespace Csharp_student_information_system
 
             else if (course.checkCourseName(name))
             {
-                if (course.insertCourse(name, hrs, descr))
+                if (course.insertSubject(name, hrs, descr))
                 {
                     MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     reloadListBoxData();
@@ -115,7 +115,7 @@ namespace Csharp_student_information_system
             {
                 MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (course.updateCourse(id, name, hrs, descr))
+            else if (course.updateSubject(id, name, hrs, descr))
             {
                 MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 reloadListBoxData();
@@ -139,7 +139,7 @@ namespace Csharp_student_information_system
 
                 if ((MessageBox.Show("Are Yousure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
-                    if (course.deleteCourse(courseID))
+                    if (course.deleteSubject(courseID))
                     {
                         MessageBox.Show("Course Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                        

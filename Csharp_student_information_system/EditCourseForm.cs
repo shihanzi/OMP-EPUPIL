@@ -18,7 +18,7 @@ namespace Csharp_student_information_system
         }
 
 
-        COURSE course = new COURSE();
+        SUBJECTS course = new SUBJECTS();
 
         // form load
         private void EditCourseForm_Load(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace Csharp_student_information_system
             {
                 MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (course.updateCourse(id, name, hrs, descr))
+            else if (course.updateSubject(id, name, hrs, descr))
             {
                 MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 fillCombo(ComboBoxCourse.SelectedIndex);

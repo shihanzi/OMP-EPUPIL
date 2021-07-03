@@ -18,7 +18,7 @@ namespace Csharp_student_information_system
         }
 
 
-        SCORE score = new SCORE();
+        MARKS score = new MARKS();
 
 
         // on form load

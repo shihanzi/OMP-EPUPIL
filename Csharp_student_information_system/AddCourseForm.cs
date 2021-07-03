@@ -29,27 +29,27 @@ namespace Csharp_student_information_system
             int hrs = (int)NumericUpDownHours.Value;
             string descr = TextBoxDescription.Text;
 
-            COURSE course = new COURSE();
+            SUBJECTS course = new SUBJECTS();
 
             if ( name.Trim() == "" )
             {
-                MessageBox.Show("Add A Course Name", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Add A Subject Name", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (course.checkCourseName(name))
             {
-                if (course.insertCourse(name, hrs, descr))
+                if (course.insertSubject(name, hrs, descr))
                 {
-                    MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("New Subject Inserted", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Course Not Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Subject Not Inserted", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
             else
             {
-                MessageBox.Show("This Course Name Already Exists", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This Course Name Already Exists", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }

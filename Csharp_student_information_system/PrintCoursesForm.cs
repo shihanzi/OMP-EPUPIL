@@ -21,7 +21,7 @@ namespace Csharp_student_information_system
         private void PrintCoursesForm_Load(object sender, EventArgs e)
         {
             // populate DataGridView1 with courses
-            COURSE course = new COURSE();
+            SUBJECTS course = new SUBJECTS();
             DataGridView1.DataSource = course.getAllCourses();
         }
 

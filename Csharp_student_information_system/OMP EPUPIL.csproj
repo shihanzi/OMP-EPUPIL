@@ -90,7 +90,7 @@
     <Compile Include="avgScoreByCourseForm.Designer.cs">
       <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="COURSE.cs" />
+    <Compile Include="SUBJECTS.cs" />
     <Compile Include="EditCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,7 +160,7 @@
     <Compile Include="RemoveScoreForm.Designer.cs">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SCORE.cs" />
+    <Compile Include="MARKS.cs" />
     <Compile Include="StaticsForm.cs">
       <SubType>Form</SubType>
     </Compile>

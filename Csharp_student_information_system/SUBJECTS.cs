@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_student_information_system
 {
-    class COURSE
+    class SUBJECTS
     {
 
 
@@ -16,11 +16,11 @@ namespace Csharp_student_information_system
 
 
         //  function to insert a new course
-    public bool insertCourse(string courseName, int hoursNumber, string description) {
+    public bool insertSubject(string subjectName, int hoursNumber, string description) {
         
-        SqlCommand command = new SqlCommand("INSERT INTO `course`(`label`, `hours_number`, `description`) VALUES (@name,@hrs,@descr)", mydb.getConnection);
+        SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Subjects]([Name],[NOH],[Description]) VALUES (@name,@hrs,@descr)", mydb.getConnection);
        
-        command.Parameters.Add("@name", SqlDbType.VarChar).Value = courseName;
+        command.Parameters.Add("@name", SqlDbType.VarChar).Value = subjectName;
         command.Parameters.Add("@hrs", SqlDbType.Int).Value = hoursNumber;
         command.Parameters.Add("@descr", SqlDbType.VarChar).Value = description;
 
@@ -36,11 +36,11 @@ namespace Csharp_student_information_system
     }
 
     //  function to uodate a course data
-    public bool updateCourse(int courseID, string courseName, int hoursNumber, string description) {
+    public bool updateSubject(int courseID, string courseName, int hoursNumber, string description) {
         
-        SqlCommand command = new SqlCommand("UPDATE `course` SET `label`=@name,`hours_number`=@hrs,`description`=@descr WHERE `id` = @cid", mydb.getConnection);
+        SqlCommand command = new SqlCommand("UPDATE [dbo].[Subjects] SET [Name]=@name,[NOH] =@hrs,[Description]=@descr WHERE [Id] = @sid", mydb.getConnection);
         
-        command.Parameters.Add("@cid", SqlDbType.Int).Value = courseID;
+        command.Parameters.Add("@sid", SqlDbType.Int).Value = courseID;
         command.Parameters.Add("@name", SqlDbType.VarChar).Value = courseName;
         command.Parameters.Add("@hrs", SqlDbType.Int).Value = hoursNumber;
         command.Parameters.Add("@descr", SqlDbType.VarChar).Value = description;
@@ -58,11 +58,11 @@ namespace Csharp_student_information_system
 
 
     //  function to remove a course by id
-    public bool deleteCourse(int courseID) {
+    public bool deleteSubject(int subjectID) {
        
-        SqlCommand command = new SqlCommand("DELETE FROM `course` WHERE `id` = @CID", mydb.getConnection);
+        SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Subjects] WHERE [Id] = @SID", mydb.getConnection);
        
-        command.Parameters.Add("@CID", SqlDbType.Int).Value = courseID;
+        command.Parameters.Add("@SID", SqlDbType.Int).Value = subjectID;
        
         mydb.openConnection();
        
@@ -76,14 +76,14 @@ namespace Csharp_student_information_system
     }
 
     // function to check if the course name already exists in the database
-    public bool checkCourseName(string courseName, int courseId = 0) {
+    public bool checkCourseName(string subjectName, int subjectId = 0) {
        
         //  id <> @cID mean when the id is diffrent of the current course id
         // like if we want to edit only the course description
-        SqlCommand command = new SqlCommand("SELECT * FROM course WHERE label=@cName And id <> @cID", mydb.getConnection);
+        SqlCommand command = new SqlCommand("SELECT * FROM subjects WHERE Name=@sName And id <> @sID", mydb.getConnection);
        
-        command.Parameters.Add("@cName", SqlDbType.VarChar).Value = courseName;
-        command.Parameters.Add("@cID", SqlDbType.Int).Value = courseId;
+        command.Parameters.Add("@sName", SqlDbType.VarChar).Value = subjectName;
+        command.Parameters.Add("@sID", SqlDbType.Int).Value = subjectId;
        
         SqlDataAdapter adapter = new SqlDataAdapter(command);
        
@@ -104,7 +104,7 @@ namespace Csharp_student_information_system
     //  function to get all courses from the database
     public DataTable getAllCourses() {
        
-        SqlCommand command = new SqlCommand("SELECT * FROM course", mydb.getConnection);
+        SqlCommand command = new SqlCommand("SELECT * FROM subjects", mydb.getConnection);
        
         SqlDataAdapter adapter = new SqlDataAdapter(command);
        
@@ -117,11 +117,11 @@ namespace Csharp_student_information_system
 
 
     //  function to return a course by id
-    public DataTable getCourseById(int courseID) {
+    public DataTable getCourseById(int subjectID) {
        
-        SqlCommand command = new SqlCommand("SELECT * FROM course WHERE id = @cid", mydb.getConnection);
+        SqlCommand command = new SqlCommand("SELECT * FROM subjects WHERE id = @sid", mydb.getConnection);
        
-        command.Parameters.Add("@cid", SqlDbType.VarChar).Value = courseID;
+        command.Parameters.Add("@sid", SqlDbType.VarChar).Value = subjectID;
        
         SqlDataAdapter adapter = new SqlDataAdapter(command);
        
@@ -144,7 +144,7 @@ namespace Csharp_student_information_system
     
     //  function to return the total courses in the database
     public string totalCourses() {
-        return execCount("SELECT COUNT(*) FROM `course`");
+        return execCount("SELECT COUNT(*) FROM [dbo].[Subjects]");
     }
 
 

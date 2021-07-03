@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_student_information_system
 {
-    class SCORE
+    class MARKS
     {
 
 

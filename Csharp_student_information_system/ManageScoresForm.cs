@@ -18,9 +18,9 @@ namespace Csharp_student_information_system
             InitializeComponent();
         }
 
-        SCORE score = new SCORE();
+        MARKS score = new MARKS();
         STUDENT student = new STUDENT();
-        COURSE course = new COURSE();
+        SUBJECTS course = new SUBJECTS();
         string data = "score";
 
         // on form load
