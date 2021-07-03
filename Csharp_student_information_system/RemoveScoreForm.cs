@@ -41,7 +41,7 @@ namespace Csharp_student_information_system
             int studentID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[0].Value.ToString());
             int courseID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[3].Value.ToString());
 
-            if ( MessageBox.Show("Do Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
+            if ( MessageBox.Show("Do You Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
             {
                 if (score.deleteScore(studentID, courseID))
                 {

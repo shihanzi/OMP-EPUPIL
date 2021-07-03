@@ -16,14 +16,14 @@ namespace Csharp_student_information_system
 
 
         //  function to insert a new marks to a student on a specific subject
-        public bool insertScore(int studentID, int courseID, double scoreValue, string description)
+        public bool insertScore(int studentID, int subjectID, double marksValue, string description)
         {
-            SqlCommand command = new SqlCommand("INSERT INTO `score`(`student_id`, `course_id`, `student_score`, `description`) VALUES (@sid,@cid,@scr" +
+            SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Marks]([StudentId],[SubjectId],[Marks],[Description]) VALUES (@stid,@suid,@mar" +
                 ",@descr)", mydb.getConnection);
             
-            command.Parameters.Add("@sid", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@cid", SqlDbType.Int).Value = courseID;
-            command.Parameters.Add("@scr", SqlDbType.Float).Value = scoreValue;
+            command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = subjectID;
+            command.Parameters.Add("@mar", SqlDbType.Float).Value = marksValue;
             command.Parameters.Add("@descr", SqlDbType.VarChar).Value = description;
             
             mydb.openConnection();
@@ -43,10 +43,10 @@ namespace Csharp_student_information_system
         // function to check if a score is already asigned to this student on this course
         public bool studentScoreExist(int studentId, int courseID)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM `score` WHERE `student_id` = @sid AND `course_id` = @cid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
             
-            command.Parameters.Add("@sid", SqlDbType.Int).Value = studentId;
-            command.Parameters.Add("@cid", SqlDbType.Int).Value = courseID;
+            command.Parameters.Add("@stid", SqlDbType.Int).Value = studentId;
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
             
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
@@ -144,10 +144,10 @@ namespace Csharp_student_information_system
         // delete score using student id, and course id
         public bool deleteScore(int studentID, int courseID)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM `score` WHERE `student_id` = @sid AND course_id = @cid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND course_id = @suid", mydb.getConnection);
             
-            command.Parameters.Add("@sid", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@cid", SqlDbType.Int).Value = courseID;
+            command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
             
             mydb.openConnection();
             

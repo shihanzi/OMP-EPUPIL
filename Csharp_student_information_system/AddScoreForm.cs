@@ -32,7 +32,7 @@ namespace Csharp_student_information_system
             ComboBoxCourse.ValueMember = "id";
 
             // populate the datagridview with all students
-            SqlCommand command = new SqlCommand("SELECT `id`, `first_name`, `last_name` FROM `student`");
+            SqlCommand command = new SqlCommand("SELECT [Id], [Firstname], [Lastname] FROM [dbo].[Students]");
             DataGridViewStudents.DataSource = student.getStudents(command);
         }
 
@@ -61,23 +61,23 @@ namespace Csharp_student_information_system
                 {
                     if (score.insertScore(studentID, courseID, scoreValue, description))
                     {
-                        MessageBox.Show("Student Score Inserted", "Add Score", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Student Marks Inserted", "Add Marks", MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Student Score Not Inserted", "Add Score", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        MessageBox.Show("Student Marks Not Inserted", "Add Marks", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("The Score For This Course Are Already Set", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The Marks For This Subjects Are Already Entered", "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
