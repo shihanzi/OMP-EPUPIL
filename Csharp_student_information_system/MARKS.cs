@@ -15,7 +15,7 @@ namespace Csharp_student_information_system
         MY_DB mydb = new MY_DB();
 
 
-        //  function to insert a new score to a student on a specific course
+        //  function to insert a new marks to a student on a specific subject
         public bool insertScore(int studentID, int courseID, double scoreValue, string description)
         {
             SqlCommand command = new SqlCommand("INSERT INTO `score`(`student_id`, `course_id`, `student_score`, `description`) VALUES (@sid,@cid,@scr" +
