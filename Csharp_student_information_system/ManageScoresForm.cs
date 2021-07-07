@@ -48,7 +48,7 @@ namespace Csharp_student_information_system
         private void ButtonShowStudents_Click(object sender, EventArgs e)
         {
             data = "student";
-            SqlCommand command = new SqlCommand("SELECT `id`, `first_name`, `last_name`, `birthdate` FROM `student`");
+            SqlCommand command = new SqlCommand("SELECT [Id], [Firstname], [Lastname], [DOB] FROM [dbo].[Students]");
             DataGridViewStudentsScore.DataSource = student.getStudents(command);
         }
 

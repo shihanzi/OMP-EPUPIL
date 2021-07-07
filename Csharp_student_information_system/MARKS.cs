@@ -71,9 +71,9 @@ namespace Csharp_student_information_system
             SqlCommand command = new SqlCommand();
             
             command.Connection = mydb.getConnection;
-            command.CommandText = "SELECT Subject.label, AVG(Marks.Students_Marks) as 'Average Score' FROM Subjects, score WHERE subject.id =" +
-            " Marks.Subjects_id GROUP BY Subjects.label";
-            
+            command.CommandText = ("SELECT Subjects.Name, AVG (Marks.Marks) as 'Average Score' FROM Subjects, Marks WHERE Subjects.Id = Marks.SubjectId GROUP BY Subjects.Name");
+
+
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             
             DataTable table = new DataTable();
