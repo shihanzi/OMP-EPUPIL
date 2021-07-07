@@ -39,11 +39,11 @@ namespace Csharp_student_information_system
         {
 
             int studentID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[0].Value.ToString());
-            int courseID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[3].Value.ToString());
+            int subjectID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[3].Value.ToString());
 
             if ( MessageBox.Show("Do You Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
             {
-                if (score.deleteScore(studentID, courseID))
+                if (score.deleteScore(studentID, subjectID))
                 {
                     MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataGridViewStudentsScore.DataSource = score.getStudentsScore();

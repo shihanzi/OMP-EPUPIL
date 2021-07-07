@@ -71,8 +71,8 @@ namespace Csharp_student_information_system
             SqlCommand command = new SqlCommand();
             
             command.Connection = mydb.getConnection;
-            command.CommandText = "SELECT course.label, AVG(score.student_score) as 'Average Score' FROM course, score WHERE course.id =" +
-            " score.course_id GROUP BY course.label";
+            command.CommandText = "SELECT Subject.label, AVG(Marks.Students_Marks) as 'Average Score' FROM Subjects, score WHERE subject.id =" +
+            " Marks.Subjects_id GROUP BY Subjects.label";
             
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             
@@ -90,9 +90,9 @@ namespace Csharp_student_information_system
             SqlCommand command = new SqlCommand();
             
             command.Connection = mydb.getConnection;
-            command.CommandText = ("SELECT SCORE.student_id, STUDENT.first_name, STUDENT.last_name, SCORE.course_id, COURSE.label, SCORE." +
-            "student_score FROM STUDENT INNER JOIN score on student.id = score.student_id INNER JOIN course on score.course_id = course.id");
-            
+            command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
+
+
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             
             DataTable table = new DataTable();
@@ -104,13 +104,13 @@ namespace Csharp_student_information_system
 
 
         // get course scores
-       public DataTable getCourseScores(int courseId)
+       public DataTable getCourseScores(int subjectId)
        {
            SqlCommand command = new SqlCommand();
            
            command.Connection = mydb.getConnection;
-           command.CommandText = ("SELECT SCORE.student_id, STUDENT.first_name, STUDENT.last_name, SCORE.course_id, COURSE.label, SCORE." +
-           "student_score FROM STUDENT INNER JOIN score on student.id = score.student_id INNER JOIN course on score.course_id = course.id WHERE score.course_id = " + courseId);
+           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname, Marks.course_id, COURSE.label, SCORE." +
+           "student_score FROM STUDENT INNER JOIN score on student.id = score.student_id INNER JOIN course on score.course_id = course.id WHERE score.course_id = " + subjectId);
            
            SqlDataAdapter adapter = new SqlDataAdapter(command);
            
@@ -144,7 +144,7 @@ namespace Csharp_student_information_system
         // delete score using student id, and course id
         public bool deleteScore(int studentID, int courseID)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND course_id = @suid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
             
             command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
             command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
