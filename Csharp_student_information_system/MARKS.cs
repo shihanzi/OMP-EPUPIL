@@ -109,8 +109,7 @@ namespace Csharp_student_information_system
            SqlCommand command = new SqlCommand();
            
            command.Connection = mydb.getConnection;
-           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname, Marks.course_id, COURSE.label, SCORE." +
-           "student_score FROM STUDENT INNER JOIN score on student.id = score.student_id INNER JOIN course on score.course_id = course.id WHERE score.course_id = " + subjectId);
+           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
            
            SqlDataAdapter adapter = new SqlDataAdapter(command);
            
@@ -128,8 +127,7 @@ namespace Csharp_student_information_system
            SqlCommand command = new SqlCommand();
            
            command.Connection = mydb.getConnection;
-           command.CommandText = ("SELECT SCORE.student_id, STUDENT.first_name, STUDENT.last_name, SCORE.course_id, COURSE.label, SCORE." +
-           "student_score FROM STUDENT INNER JOIN score on student.id = score.student_id INNER JOIN course on score.course_id = course.id WHERE score.student_id = " + studentId);
+           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
            
            SqlDataAdapter adapter = new SqlDataAdapter(command);
            

@@ -29,7 +29,7 @@ namespace Csharp_student_information_system
             DataGridViewStudentsScore.DataSource = score.getStudentsScore();
 
             // populate dataGridView1 with students id, first name, last name 
-            dataGridView1.DataSource = student.getStudents(new SqlCommand("Select [Id], [Firstname], [Lastname] FROM [Student_DB]"));
+            dataGridView1.DataSource = student.getStudents(new SqlCommand("SELECT id, Firstname, Lastname FROM Students"));
 
             // populate listbox with courses
             ListBoxCourses.DataSource = course.getAllCourses();
