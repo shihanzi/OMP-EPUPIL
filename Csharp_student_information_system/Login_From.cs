@@ -44,12 +44,21 @@ namespace Csharp_student_information_system
             
             if ((table.Rows.Count > 0))
             {
-                // if this user exist 
-                // we will set the dialogResult to OK
                 // that mean the login informatons are correct -> open the mainform
                 // check out the "Program.cs"
+                string RoleType = table.Rows[0][3].ToString();
+
+                if (RoleType == "admin")
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+                else if (RoleType== "user")
+                {
+                    this.Hide();
+                    SubForm Sf = new SubForm();
+                    Sf.ShowDialog();
+               }
                 
-                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -58,7 +67,7 @@ namespace Csharp_student_information_system
         }
 
 
-        // on form load
+       
         private void Login_From_Load(object sender, EventArgs e)
         {
             // set image into picturebox from images folder

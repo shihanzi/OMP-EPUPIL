@@ -16,10 +16,12 @@ namespace Csharp_student_information_system
         {
              Application.EnableVisualStyles();
              Application.SetCompatibleTextRenderingDefault(false);
-             //Application.Run(new Login_From());
+             
 
              Login_From fLogin = new Login_From();
-             if (fLogin.ShowDialog() == DialogResult.OK)
+             
+            
+            if (fLogin.ShowDialog() == DialogResult.OK)
              {
                  Application.Run(new MainForm());
              }

@@ -90,6 +90,12 @@
     <Compile Include="avgScoreByCourseForm.Designer.cs">
       <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm.Designer.cs">
+      <DependentUpon>SubForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SUBJECTS.cs" />
     <Compile Include="EditCourseForm.cs">
       <SubType>Form</SubType>
