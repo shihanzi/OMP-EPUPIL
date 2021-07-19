@@ -71,7 +71,12 @@ namespace Csharp_student_information_system
         private void Login_From_Load(object sender, EventArgs e)
         {
             // set image into picturebox from images folder
-            pictureBox1.Image = Image.FromFile("../../images/user.png");
+           
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Csharp_student_information_system
 {
-    public partial class ManageScoresForm : Form
+    public partial class ManageMarksForm : Form
     {
-        public ManageScoresForm()
+        public ManageMarksForm()
         {
             InitializeComponent();
         }
@@ -83,7 +83,7 @@ namespace Csharp_student_information_system
         // open a new form -> show the average score by course
         private void ButtonAvgScore_Click(object sender, EventArgs e)
         {
-            avgScoreByCourseForm avgScoreByCourseF = new avgScoreByCourseForm();
+            avgMarksBySubjectForm avgScoreByCourseF = new avgMarksBySubjectForm();
             avgScoreByCourseF.Show(this);
         }
 

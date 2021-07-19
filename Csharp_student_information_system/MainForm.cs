@@ -49,25 +49,25 @@ namespace Csharp_student_information_system
 
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddCourseForm AddCF = new AddCourseForm();
+            AddSubjectForm AddCF = new AddSubjectForm();
             AddCF.Show(this);
         }
 
         private void removeCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoveCourseForm RemoveCF = new RemoveCourseForm();
+            RemoveSubjectForm RemoveCF = new RemoveSubjectForm();
             RemoveCF.Show(this);
         }
 
         private void editCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCourseForm EditCF = new EditCourseForm();
+            EditSubjectForm EditCF = new EditSubjectForm();
             EditCF.Show(this);
         }
 
         private void manageCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManageCoursesForm ManageCF = new ManageCoursesForm();
+            ManageSubjectForm ManageCF = new ManageSubjectForm();
             ManageCF.Show(this);
         }
 
@@ -79,19 +79,19 @@ namespace Csharp_student_information_system
 
         private void removeScoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoveScoreForm RemoveSF = new RemoveScoreForm();
+            RemoveMarksForm RemoveSF = new RemoveMarksForm();
             RemoveSF.Show(this);
         }
 
         private void manageScoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManageScoresForm ManageSF = new ManageScoresForm();
+            ManageMarksForm ManageSF = new ManageMarksForm();
             ManageSF.Show(this);
         }
 
         private void avgScoreByCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            avgScoreByCourseForm AvgSF = new avgScoreByCourseForm();
+            avgMarksBySubjectForm AvgSF = new avgMarksBySubjectForm();
             AvgSF.Show(this);
         }
 
@@ -103,7 +103,7 @@ namespace Csharp_student_information_system
 
         private void printToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            PrintCoursesForm PrintCF = new PrintCoursesForm();
+            PrintSubjectForm PrintCF = new PrintSubjectForm();
             PrintCF.Show(this);
         }
 

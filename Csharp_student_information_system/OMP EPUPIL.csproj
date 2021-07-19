@@ -66,11 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCourseForm.cs">
+    <Compile Include="AddSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCourseForm.Designer.cs">
-      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    <Compile Include="AddSubjectForm.Designer.cs">
+      <DependentUpon>AddSubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddScoreForm.cs">
       <SubType>Form</SubType>
@@ -84,11 +84,11 @@
     <Compile Include="AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="avgScoreByCourseForm.cs">
+    <Compile Include="avgMarksBySubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="avgScoreByCourseForm.Designer.cs">
-      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    <Compile Include="avgMarksBySubjectForm.Designer.cs">
+      <DependentUpon>avgMarksBySubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SCHOOL.cs" />
     <Compile Include="Student_DBDataSet.Designer.cs">
@@ -109,11 +109,11 @@
       <DependentUpon>SubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SUBJECTS.cs" />
-    <Compile Include="EditCourseForm.cs">
+    <Compile Include="EditSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCourseForm.Designer.cs">
-      <DependentUpon>EditCourseForm.cs</DependentUpon>
+    <Compile Include="EditSubjectForm.Designer.cs">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login_From.cs">
       <SubType>Form</SubType>
@@ -127,17 +127,17 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCoursesForm.cs">
+    <Compile Include="ManageSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCoursesForm.Designer.cs">
-      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    <Compile Include="ManageSubjectForm.Designer.cs">
+      <DependentUpon>ManageSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageScoresForm.cs">
+    <Compile Include="ManageMarksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageScoresForm.Designer.cs">
-      <DependentUpon>ManageScoresForm.cs</DependentUpon>
+    <Compile Include="ManageMarksForm.Designer.cs">
+      <DependentUpon>ManageMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageStudentsForm.cs">
       <SubType>Form</SubType>
@@ -146,11 +146,11 @@
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MY_DB.cs" />
-    <Compile Include="PrintCoursesForm.cs">
+    <Compile Include="PrintSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintCoursesForm.Designer.cs">
-      <DependentUpon>PrintCoursesForm.cs</DependentUpon>
+    <Compile Include="PrintSubjectForm.Designer.cs">
+      <DependentUpon>PrintSubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintScoresForm.cs">
       <SubType>Form</SubType>
@@ -166,17 +166,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveCourseForm.cs">
+    <Compile Include="RemoveSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveCourseForm.Designer.cs">
-      <DependentUpon>RemoveCourseForm.cs</DependentUpon>
+    <Compile Include="RemoveSubjectForm.Designer.cs">
+      <DependentUpon>RemoveSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveScoreForm.cs">
+    <Compile Include="RemoveMarksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveScoreForm.Designer.cs">
-      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    <Compile Include="RemoveMarksForm.Designer.cs">
+      <DependentUpon>RemoveMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MARKS.cs" />
     <Compile Include="StaticsForm.cs">
@@ -198,8 +198,8 @@
     <Compile Include="UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCourseForm.resx">
-      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddSubjectForm.resx">
+      <DependentUpon>AddSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
@@ -207,11 +207,11 @@
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="avgScoreByCourseForm.resx">
-      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="avgMarksBySubjectForm.resx">
+      <DependentUpon>avgMarksBySubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCourseForm.resx">
-      <DependentUpon>EditCourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditSubjectForm.resx">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_From.resx">
       <DependentUpon>Login_From.cs</DependentUpon>
@@ -219,17 +219,17 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCoursesForm.resx">
-      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManageSubjectForm.resx">
+      <DependentUpon>ManageSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageScoresForm.resx">
-      <DependentUpon>ManageScoresForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManageMarksForm.resx">
+      <DependentUpon>ManageMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageStudentsForm.resx">
       <DependentUpon>ManageStudentsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintCoursesForm.resx">
-      <DependentUpon>PrintCoursesForm.cs</DependentUpon>
+    <EmbeddedResource Include="PrintSubjectForm.resx">
+      <DependentUpon>PrintSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintScoresForm.resx">
       <DependentUpon>PrintScoresForm.cs</DependentUpon>
@@ -246,11 +246,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RemoveCourseForm.resx">
-      <DependentUpon>RemoveCourseForm.cs</DependentUpon>
+    <EmbeddedResource Include="RemoveSubjectForm.resx">
+      <DependentUpon>RemoveSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveScoreForm.resx">
-      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    <EmbeddedResource Include="RemoveMarksForm.resx">
+      <DependentUpon>RemoveMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateDeleteSchoolForm.resx">
       <DependentUpon>UpdateDeleteSchoolForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_student_information_system
 {
-    partial class avgScoreByCourseForm
+    partial class avgMarksBySubjectForm
     {
         /// <summary>
         /// Required designer variable.

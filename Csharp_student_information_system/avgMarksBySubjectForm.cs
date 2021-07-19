@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_student_information_system
 {
-    public partial class avgScoreByCourseForm : Form
+    public partial class avgMarksBySubjectForm : Form
     {
-        public avgScoreByCourseForm()
+        public avgMarksBySubjectForm()
         {
             InitializeComponent();
         }

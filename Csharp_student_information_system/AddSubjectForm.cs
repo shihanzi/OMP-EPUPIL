@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_student_information_system
 {
-    public partial class AddCourseForm : Form
+    public partial class AddSubjectForm : Form
     {
-        public AddCourseForm()
+        public AddSubjectForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Csharp_student_information_system
 {
-    partial class RemoveScoreForm
+    partial class RemoveMarksForm
     {
         /// <summary>
         /// Required designer variable.

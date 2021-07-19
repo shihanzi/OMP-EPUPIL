@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Csharp_student_information_system
 {
-    public partial class PrintCoursesForm : Form
+    public partial class PrintSubjectForm : Form
     {
-        public PrintCoursesForm()
+        public PrintSubjectForm()
         {
             InitializeComponent();
         }

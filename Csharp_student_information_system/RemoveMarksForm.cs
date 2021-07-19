@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Csharp_student_information_system
 {
-    public partial class RemoveScoreForm : Form
+    public partial class RemoveMarksForm : Form
     {
-        public RemoveScoreForm()
+        public RemoveMarksForm()
         {
             InitializeComponent();
         }

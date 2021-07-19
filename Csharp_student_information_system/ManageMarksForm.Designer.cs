@@ -1,6 +1,6 @@
 ﻿namespace Csharp_student_information_system
 {
-    partial class ManageScoresForm
+    partial class ManageMarksForm
     {
         /// <summary>
         /// Required designer variable.

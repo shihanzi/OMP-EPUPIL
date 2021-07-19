@@ -1,6 +1,6 @@
 ﻿namespace Csharp_student_information_system
 {
-    partial class EditCourseForm
+    partial class EditSubjectForm
     {
         /// <summary>
         /// Required designer variable.
