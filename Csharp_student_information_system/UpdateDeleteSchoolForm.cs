@@ -19,29 +19,17 @@ namespace Csharp_student_information_system
             InitializeComponent();
         }
             SCHOOL school = new SCHOOL();
-            MY_DB mydb = new MY_DB();
+           
            
 
         //  function to get School details from the database
-        public DataTable getAllCourses()
-        {
-
-            SqlCommand command = new SqlCommand("SELECT * FROM School", mydb.getConnection);
-
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-            DataTable table = new DataTable();
-
-            adapter.Fill(table);
-
-            return table;
-        }
+       
 
         //  create a function to verify data
         bool verify()
         {
-            if          ((Cmb_SchoolId.Text.Trim() == "")
-                        || (txt_SchhoolName.Text.Trim() == "")
+            if          
+                         ((txt_SchhoolName.Text.Trim() == "")
                         || (txt_SchhoolAddress.Text.Trim() == "")
                         || (txt_SchhoolPhone.Text.Trim() == "")
                         || (txt_SchhoolWeb.Text.Trim() == "")
@@ -58,7 +46,7 @@ namespace Csharp_student_information_system
 
         private void Btn_SchoolUpdate_Click(object sender, EventArgs e)
         {
-            int Sid = (int) Cmb_SchoolId.SelectedValue;
+            int id=1;
             string scn = txt_SchhoolName.Text;
             string scadd = txt_SchhoolAddress.Text;
             string scphone = txt_SchhoolPhone.Text;
@@ -69,7 +57,7 @@ namespace Csharp_student_information_system
             {
                 try
                 {  
-                    if (school.updateSchool(Sid,scn, scadd, scphone, scweb, scemail))
+                    if (school.updateSchool(id,scn, scadd, scphone, scweb, scemail))
                     {
                         MessageBox.Show("School Information Updated", "Edit School", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -93,18 +81,31 @@ namespace Csharp_student_information_system
 
         private void UpdateDeleteSchoolForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'student_DBDataSet.School' table. You can move, or remove it, as needed.
-            this.schoolTableAdapter.Fill(this.student_DBDataSet.School);
 
-            //  display School ID on the combobox
-            Cmb_SchoolId.DataSource = school.getSchoolDetails();
-            Cmb_SchoolId.DisplayMember = "label";
-            Cmb_SchoolId.ValueMember = "scid";
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[School]");
+            Dgv_SchoolDetails.ReadOnly = true;
+            Dgv_SchoolDetails.RowTemplate.Height = 80;
+            Dgv_SchoolDetails.DataSource = school.getSchoolDetails(command);
+            Dgv_SchoolDetails.AllowUserToAddRows = false;
+
+            
             
 
-            // set the selected combo item to nothing
-            Cmb_SchoolId.SelectedItem = null;
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        // Refresh School gridview
+        private void Btn_SchoolRefresh_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[School]");
+
+            Dgv_SchoolDetails.ReadOnly = true;
+            Dgv_SchoolDetails.RowTemplate.Height = 80;
+            Dgv_SchoolDetails.DataSource = school.getSchoolDetails(command);
+             Dgv_SchoolDetails.AllowUserToAddRows = false;
         }
     }
 }

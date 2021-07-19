@@ -84,5 +84,10 @@ namespace Csharp_student_information_system
 
             DataGridView1.AllowUserToAddRows = false;
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

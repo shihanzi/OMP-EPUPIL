@@ -42,13 +42,14 @@ namespace Csharp_student_information_system
             this.txt_SchhoolWeb = new System.Windows.Forms.TextBox();
             this.txt_SchhoolMail = new System.Windows.Forms.TextBox();
             this.Btn_SchoolUpdate = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Cmb_SchoolId = new System.Windows.Forms.ComboBox();
             this.student_DBDataSet = new Csharp_student_information_system.Student_DBDataSet();
             this.schoolBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.schoolTableAdapter = new Csharp_student_information_system.Student_DBDataSetTableAdapters.SchoolTableAdapter();
+            this.Dgv_SchoolDetails = new System.Windows.Forms.DataGridView();
+            this.Btn_SchoolRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.student_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_SchoolDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -157,31 +158,13 @@ namespace Csharp_student_information_system
             this.Btn_SchoolUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Btn_SchoolUpdate.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SchoolUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Btn_SchoolUpdate.Location = new System.Drawing.Point(406, 393);
+            this.Btn_SchoolUpdate.Location = new System.Drawing.Point(530, 393);
             this.Btn_SchoolUpdate.Name = "Btn_SchoolUpdate";
             this.Btn_SchoolUpdate.Size = new System.Drawing.Size(210, 45);
             this.Btn_SchoolUpdate.TabIndex = 11;
             this.Btn_SchoolUpdate.Text = "UPDATE";
             this.Btn_SchoolUpdate.UseVisualStyleBackColor = false;
             this.Btn_SchoolUpdate.Click += new System.EventHandler(this.Btn_SchoolUpdate_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(478, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 37);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "ID";
-            // 
-            // Cmb_SchoolId
-            // 
-            this.Cmb_SchoolId.FormattingEnabled = true;
-            this.Cmb_SchoolId.Location = new System.Drawing.Point(530, 73);
-            this.Cmb_SchoolId.Name = "Cmb_SchoolId";
-            this.Cmb_SchoolId.Size = new System.Drawing.Size(121, 21);
-            this.Cmb_SchoolId.TabIndex = 13;
             // 
             // student_DBDataSet
             // 
@@ -197,13 +180,35 @@ namespace Csharp_student_information_system
             // 
             this.schoolTableAdapter.ClearBeforeFill = true;
             // 
+            // Dgv_SchoolDetails
+            // 
+            this.Dgv_SchoolDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_SchoolDetails.Location = new System.Drawing.Point(31, 455);
+            this.Dgv_SchoolDetails.Name = "Dgv_SchoolDetails";
+            this.Dgv_SchoolDetails.Size = new System.Drawing.Size(883, 75);
+            this.Dgv_SchoolDetails.TabIndex = 14;
+            this.Dgv_SchoolDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Btn_SchoolRefresh
+            // 
+            this.Btn_SchoolRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Btn_SchoolRefresh.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SchoolRefresh.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_SchoolRefresh.Location = new System.Drawing.Point(290, 393);
+            this.Btn_SchoolRefresh.Name = "Btn_SchoolRefresh";
+            this.Btn_SchoolRefresh.Size = new System.Drawing.Size(210, 45);
+            this.Btn_SchoolRefresh.TabIndex = 15;
+            this.Btn_SchoolRefresh.Text = "REFRESH";
+            this.Btn_SchoolRefresh.UseVisualStyleBackColor = false;
+            this.Btn_SchoolRefresh.Click += new System.EventHandler(this.Btn_SchoolRefresh_Click);
+            // 
             // UpdateDeleteSchoolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Cmb_SchoolId);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(939, 542);
+            this.Controls.Add(this.Btn_SchoolRefresh);
+            this.Controls.Add(this.Dgv_SchoolDetails);
             this.Controls.Add(this.Btn_SchoolUpdate);
             this.Controls.Add(this.txt_SchhoolMail);
             this.Controls.Add(this.txt_SchhoolWeb);
@@ -221,6 +226,7 @@ namespace Csharp_student_information_system
             this.Load += new System.EventHandler(this.UpdateDeleteSchoolForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.student_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schoolBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_SchoolDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,10 +246,10 @@ namespace Csharp_student_information_system
         private System.Windows.Forms.TextBox txt_SchhoolWeb;
         private System.Windows.Forms.TextBox txt_SchhoolMail;
         private System.Windows.Forms.Button Btn_SchoolUpdate;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Cmb_SchoolId;
         private Student_DBDataSet student_DBDataSet;
         private System.Windows.Forms.BindingSource schoolBindingSource;
         private Student_DBDataSetTableAdapters.SchoolTableAdapter schoolTableAdapter;
+        private System.Windows.Forms.DataGridView Dgv_SchoolDetails;
+        private System.Windows.Forms.Button Btn_SchoolRefresh;
     }
 }
