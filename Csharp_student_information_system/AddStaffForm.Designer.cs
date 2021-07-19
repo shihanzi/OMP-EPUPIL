@@ -182,7 +182,7 @@ namespace OMP_Epupil
             this.RadioButtonFemale.AutoSize = true;
             this.RadioButtonFemale.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonFemale.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.RadioButtonFemale.Location = new System.Drawing.Point(127, 12);
+            this.RadioButtonFemale.Location = new System.Drawing.Point(93, 12);
             this.RadioButtonFemale.Name = "RadioButtonFemale";
             this.RadioButtonFemale.Size = new System.Drawing.Size(83, 26);
             this.RadioButtonFemale.TabIndex = 1;
@@ -235,7 +235,7 @@ namespace OMP_Epupil
             // 
             // PictureBoxStaffImage
             // 
-            this.PictureBoxStaffImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PictureBoxStaffImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.PictureBoxStaffImage.Location = new System.Drawing.Point(145, 335);
             this.PictureBoxStaffImage.Name = "PictureBoxStaffImage";
             this.PictureBoxStaffImage.Size = new System.Drawing.Size(237, 142);
@@ -245,12 +245,15 @@ namespace OMP_Epupil
             // 
             // ButtonUploadImage
             // 
+            this.ButtonUploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ButtonUploadImage.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonUploadImage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ButtonUploadImage.Location = new System.Drawing.Point(145, 483);
             this.ButtonUploadImage.Name = "ButtonUploadImage";
-            this.ButtonUploadImage.Size = new System.Drawing.Size(237, 23);
+            this.ButtonUploadImage.Size = new System.Drawing.Size(237, 39);
             this.ButtonUploadImage.TabIndex = 33;
-            this.ButtonUploadImage.Text = "upload image";
-            this.ButtonUploadImage.UseVisualStyleBackColor = true;
+            this.ButtonUploadImage.Text = "UPLOAD PHOTO";
+            this.ButtonUploadImage.UseVisualStyleBackColor = false;
             this.ButtonUploadImage.Click += new System.EventHandler(this.ButtonUploadImage_Click_1);
             // 
             // ButtonAddStaff
@@ -258,7 +261,7 @@ namespace OMP_Epupil
             this.ButtonAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
             this.ButtonAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddStaff.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.ButtonAddStaff.ForeColor = System.Drawing.Color.White;
             this.ButtonAddStaff.Location = new System.Drawing.Point(222, 550);
             this.ButtonAddStaff.Name = "ButtonAddStaff";
@@ -273,7 +276,7 @@ namespace OMP_Epupil
             this.ButtonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(38)))), ((int)(((byte)(19)))));
             this.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancel.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.ButtonCancel.ForeColor = System.Drawing.Color.White;
             this.ButtonCancel.Location = new System.Drawing.Point(39, 550);
             this.ButtonCancel.Name = "ButtonCancel";

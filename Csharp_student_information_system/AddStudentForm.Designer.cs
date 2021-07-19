@@ -130,12 +130,13 @@
             // 
             // ButtonUploadImage
             // 
+            this.ButtonUploadImage.BackColor = System.Drawing.Color.Yellow;
             this.ButtonUploadImage.Location = new System.Drawing.Point(127, 457);
             this.ButtonUploadImage.Name = "ButtonUploadImage";
-            this.ButtonUploadImage.Size = new System.Drawing.Size(237, 23);
+            this.ButtonUploadImage.Size = new System.Drawing.Size(237, 34);
             this.ButtonUploadImage.TabIndex = 29;
-            this.ButtonUploadImage.Text = "upload image";
-            this.ButtonUploadImage.UseVisualStyleBackColor = true;
+            this.ButtonUploadImage.Text = "UPLOAD PHOTO";
+            this.ButtonUploadImage.UseVisualStyleBackColor = false;
             this.ButtonUploadImage.Click += new System.EventHandler(this.ButtonUploadImage_Click);
             // 
             // PictureBoxStudentImage
