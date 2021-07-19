@@ -90,6 +90,18 @@
     <Compile Include="avgScoreByCourseForm.Designer.cs">
       <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SCHOOL.cs" />
+    <Compile Include="Student_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDeleteSchoolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDeleteSchoolForm.Designer.cs">
+      <DependentUpon>UpdateDeleteSchoolForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +252,9 @@
     <EmbeddedResource Include="RemoveScoreForm.resx">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDeleteSchoolForm.resx">
+      <DependentUpon>UpdateDeleteSchoolForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaticsForm.resx">
       <DependentUpon>StaticsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +273,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Student_DBDataSet.xsc">
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Student_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Student_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Student_DBDataSet.xss">
+      <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

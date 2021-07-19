@@ -17,7 +17,7 @@ namespace Csharp_student_information_system
             InitializeComponent();
         }
 
-        SUBJECTS course = new SUBJECTS();
+        SUBJECTS subject = new SUBJECTS();
         int pos;
 
         // on form load populate the listbox with courses
@@ -29,20 +29,20 @@ namespace Csharp_student_information_system
         // create a method to populate the listbox with courses name and id
         void reloadListBoxData()
         {
-            ListBoxCourses.DataSource = course.getAllCourses();
+            ListBoxCourses.DataSource = subject.getAllCourses();
             ListBoxCourses.ValueMember = "id";
             ListBoxCourses.DisplayMember = "label";
 
             ListBoxCourses.SelectedItem = null;
 
-            // display the total courses number
-            LabelTotalCourses.Text = ("Total Courses: " + course.totalCourses());
+            // display the total Subjects number
+            LabelTotalCourses.Text = ("Total Subjects: " + subject.totalCourses());
         }
 
         // method to show data depending on the index
         void showData(int index)
         {
-            DataRow dr = course.getAllCourses().Rows[index];
+            DataRow dr = subject.getAllCourses().Rows[index];
 
             ListBoxCourses.SelectedIndex = index;
 
@@ -78,25 +78,25 @@ namespace Csharp_student_information_system
 
             if ( name.Trim() == "" )
             {
-                MessageBox.Show("Add A Course Name", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Add A Subject Name", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
-            else if (course.checkCourseName(name))
+            else if (subject.checkCourseName(name))
             {
-                if (course.insertSubject(name, hrs, descr))
+                if (subject.insertSubject(name, hrs, descr))
                 {
-                    MessageBox.Show("New Course Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("New Subject Inserted", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     reloadListBoxData();
                 }
                 else
                 {
-                    MessageBox.Show("Course Not Inserted", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Subject Not Inserted", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
             else
             {
-                MessageBox.Show("This Course Name Already Exists", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This Subject Name Already Exists", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -111,18 +111,18 @@ namespace Csharp_student_information_system
             int id = int.Parse(TextBoxID.Text);
 
             // check if the course name already exist & and it's not the current course using the id
-            if (!course.checkCourseName(name, Convert.ToInt32(TextBoxID.Text)))
+            if (!subject.checkCourseName(name, Convert.ToInt32(TextBoxID.Text)))
             {
-                MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("This Subject Name Already Exist", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (course.updateSubject(id, name, hrs, descr))
+            else if (subject.updateSubject(id, name, hrs, descr))
             {
-                MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subject Updated", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 reloadListBoxData();
             }
             else
             {
-                MessageBox.Show("Course Not Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Subject Not Updated", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             pos = 0;
@@ -137,11 +137,11 @@ namespace Csharp_student_information_system
             {
                 int courseID = Convert.ToInt32(TextBoxID.Text);
 
-                if ((MessageBox.Show("Are Yousure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                if ((MessageBox.Show("Are You sure You Want To Delete This Subject?", "Remove Subject", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
-                    if (course.deleteSubject(courseID))
+                    if (subject.deleteSubject(courseID))
                     {
-                        MessageBox.Show("Course Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Subject Deleted", "Remove Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
                        
                         // clear fields
                         TextBoxID.Text = "";
@@ -153,7 +153,7 @@ namespace Csharp_student_information_system
                     }
                     else
                     {
-                        MessageBox.Show("Course Not Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Subject Not Deleted", "Remove Subject", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
                 }
@@ -161,7 +161,7 @@ namespace Csharp_student_information_system
             }
             catch
             {
-                MessageBox.Show("Enter A Valid Numeric ID", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter A Valid Numeric ID", "Remove Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             pos = 0;
@@ -179,7 +179,7 @@ namespace Csharp_student_information_system
         // button next
         private void ButtonNext_Click(object sender, EventArgs e)
         {
-            if ( pos < (course.getAllCourses().Rows.Count - 1) )
+            if ( pos < (subject.getAllCourses().Rows.Count - 1) )
             {
                 pos = pos + 1;
                 showData(pos);
@@ -202,7 +202,7 @@ namespace Csharp_student_information_system
         // button last
         private void ButtonLast_Click(object sender, EventArgs e)
         {
-            pos = course.getAllCourses().Rows.Count - 1;
+            pos = subject.getAllCourses().Rows.Count - 1;
             showData(pos);
         }
     }

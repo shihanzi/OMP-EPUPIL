@@ -112,5 +112,11 @@ namespace Csharp_student_information_system
             PrintScoresForm PrintSCF = new PrintScoresForm();
             PrintSCF.Show(this);
         }
+
+        private void eDITREMOVESCHOOLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateDeleteSchoolForm AdSch = new UpdateDeleteSchoolForm();
+            AdSch.Show();
+        }
     }
 }

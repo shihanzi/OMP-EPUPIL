@@ -65,7 +65,7 @@ namespace Csharp_student_information_system
         }
 
 
-        // function to get the average score by course
+        // method to get the average marks by subject
         public DataTable getAvgScoreByCourse()
         {
             SqlCommand command = new SqlCommand();
@@ -84,7 +84,7 @@ namespace Csharp_student_information_system
         }
 
 
-        // function to get students score
+        // method to get students marks
        public DataTable getStudentsScore()
         {
             SqlCommand command = new SqlCommand();
