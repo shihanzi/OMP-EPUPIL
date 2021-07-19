@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     public partial class MainForm : Form
     {
@@ -117,6 +117,27 @@ namespace Csharp_student_information_system
         {
             UpdateDeleteSchoolForm AdSch = new UpdateDeleteSchoolForm();
             AdSch.Show();
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStdF = new AddStaffForm();
+            addStdF.Show(this);
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

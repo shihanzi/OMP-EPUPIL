@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     class MY_DB
     {

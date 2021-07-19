@@ -1,5 +1,5 @@
 ﻿
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     partial class UpdateDeleteSchoolForm
     {
@@ -42,9 +42,9 @@ namespace Csharp_student_information_system
             this.txt_SchhoolWeb = new System.Windows.Forms.TextBox();
             this.txt_SchhoolMail = new System.Windows.Forms.TextBox();
             this.Btn_SchoolUpdate = new System.Windows.Forms.Button();
-            this.student_DBDataSet = new Csharp_student_information_system.Student_DBDataSet();
+            this.student_DBDataSet = new OMP_Epupil.Student_DBDataSet();
             this.schoolBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.schoolTableAdapter = new Csharp_student_information_system.Student_DBDataSetTableAdapters.SchoolTableAdapter();
+            this.schoolTableAdapter = new OMP_Epupil.Student_DBDataSetTableAdapters.SchoolTableAdapter();
             this.Dgv_SchoolDetails = new System.Windows.Forms.DataGridView();
             this.Btn_SchoolRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.student_DBDataSet)).BeginInit();

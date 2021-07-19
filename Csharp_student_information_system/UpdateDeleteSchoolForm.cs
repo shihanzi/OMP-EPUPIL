@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     public partial class UpdateDeleteSchoolForm : Form
     {

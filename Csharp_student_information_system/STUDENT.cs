@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Data;
 
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     class STUDENT
     {

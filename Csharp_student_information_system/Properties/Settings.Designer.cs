@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Csharp_student_information_system.Properties {
+namespace OMP_Epupil.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

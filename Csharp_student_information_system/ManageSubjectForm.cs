@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     public partial class ManageSubjectForm : Form
     {

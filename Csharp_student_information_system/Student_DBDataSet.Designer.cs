@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Csharp_student_information_system {
+namespace OMP_Epupil {
     
     
     /// <summary>
@@ -595,7 +595,7 @@ namespace Csharp_student_information_system {
         }
     }
 }
-namespace Csharp_student_information_system.Student_DBDataSetTableAdapters {
+namespace OMP_Epupil.Student_DBDataSetTableAdapters {
     
     
     /// <summary>
@@ -732,7 +732,7 @@ namespace Csharp_student_information_system.Student_DBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Csharp_student_information_system.Properties.Settings.Default.Student_DBConnectionString;
+            this._connection.ConnectionString = global::OMP_Epupil.Properties.Settings.Default.Student_DBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

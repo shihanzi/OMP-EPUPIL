@@ -1,5 +1,5 @@
 ﻿
-namespace Csharp_student_information_system
+namespace OMP_Epupil
 {
     partial class SubForm
     {

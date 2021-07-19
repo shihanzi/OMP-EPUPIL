@@ -1,4 +1,4 @@
-﻿namespace Csharp_student_information_system
+﻿namespace OMP_Epupil
 {
     partial class AddStudentForm
     {
@@ -64,11 +64,11 @@
             // RadioButtonFemale
             // 
             this.RadioButtonFemale.AutoSize = true;
-            this.RadioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonFemale.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonFemale.ForeColor = System.Drawing.Color.White;
             this.RadioButtonFemale.Location = new System.Drawing.Point(112, 13);
             this.RadioButtonFemale.Name = "RadioButtonFemale";
-            this.RadioButtonFemale.Size = new System.Drawing.Size(86, 24);
+            this.RadioButtonFemale.Size = new System.Drawing.Size(83, 26);
             this.RadioButtonFemale.TabIndex = 1;
             this.RadioButtonFemale.Text = "Female";
             this.RadioButtonFemale.UseVisualStyleBackColor = true;
@@ -77,11 +77,11 @@
             // 
             this.RadioButtonMale.AutoSize = true;
             this.RadioButtonMale.Checked = true;
-            this.RadioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonMale.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonMale.ForeColor = System.Drawing.Color.White;
             this.RadioButtonMale.Location = new System.Drawing.Point(19, 13);
             this.RadioButtonMale.Name = "RadioButtonMale";
-            this.RadioButtonMale.Size = new System.Drawing.Size(65, 24);
+            this.RadioButtonMale.Size = new System.Drawing.Size(65, 26);
             this.RadioButtonMale.TabIndex = 0;
             this.RadioButtonMale.TabStop = true;
             this.RadioButtonMale.Text = "Male";
@@ -90,11 +90,11 @@
             // Label7
             // 
             this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label7.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label7.ForeColor = System.Drawing.Color.White;
             this.Label7.Location = new System.Drawing.Point(46, 134);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(74, 20);
+            this.Label7.Size = new System.Drawing.Size(71, 22);
             this.Label7.TabIndex = 32;
             this.Label7.Text = "Gender:";
             // 
@@ -140,7 +140,7 @@
             // 
             // PictureBoxStudentImage
             // 
-            this.PictureBoxStudentImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(196)))), ((int)(((byte)(244)))));
+            this.PictureBoxStudentImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PictureBoxStudentImage.Location = new System.Drawing.Point(127, 315);
             this.PictureBoxStudentImage.Name = "PictureBoxStudentImage";
             this.PictureBoxStudentImage.Size = new System.Drawing.Size(237, 142);
@@ -151,11 +151,11 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label6.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label6.ForeColor = System.Drawing.Color.White;
             this.Label6.Location = new System.Drawing.Point(43, 315);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(70, 20);
+            this.Label6.Size = new System.Drawing.Size(68, 22);
             this.Label6.TabIndex = 27;
             this.Label6.Text = "Picture:";
             // 
@@ -171,11 +171,11 @@
             // Label5
             // 
             this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label5.ForeColor = System.Drawing.Color.White;
             this.Label5.Location = new System.Drawing.Point(39, 219);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(80, 20);
+            this.Label5.Size = new System.Drawing.Size(77, 22);
             this.Label5.TabIndex = 25;
             this.Label5.Text = "Address:";
             // 
@@ -190,11 +190,11 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label4.ForeColor = System.Drawing.Color.White;
             this.Label4.Location = new System.Drawing.Point(54, 178);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(65, 20);
+            this.Label4.Size = new System.Drawing.Size(63, 22);
             this.Label4.TabIndex = 23;
             this.Label4.Text = "Phone:";
             // 
@@ -210,13 +210,13 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(29, 100);
+            this.Label3.Location = new System.Drawing.Point(13, 100);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(91, 20);
+            this.Label3.Size = new System.Drawing.Size(112, 22);
             this.Label3.TabIndex = 21;
-            this.Label3.Text = "BirthDate:";
+            this.Label3.Text = "Date of Birth:";
             // 
             // TextBoxLname
             // 
@@ -229,11 +229,11 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.White;
             this.Label2.Location = new System.Drawing.Point(23, 60);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(100, 20);
+            this.Label2.Size = new System.Drawing.Size(96, 22);
             this.Label2.TabIndex = 19;
             this.Label2.Text = "Last Name:";
             // 
@@ -248,11 +248,11 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(19, 16);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(101, 20);
+            this.Label1.Size = new System.Drawing.Size(98, 22);
             this.Label1.TabIndex = 17;
             this.Label1.Text = "First Name:";
             // 
@@ -260,7 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(405, 570);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.Label7);

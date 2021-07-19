@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,7 @@
       <DependentUpon>avgMarksBySubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SCHOOL.cs" />
+    <Compile Include="STAFF.cs" />
     <Compile Include="Student_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +205,9 @@
     <Compile Include="UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSubjectForm.resx">
       <DependentUpon>AddSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
