@@ -121,13 +121,14 @@ namespace OMP_Epupil
 
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
-            AddStaffForm addStdF = new AddStaffForm();
-            addStdF.Show(this);
+            AddStaffForm addStaffF = new AddStaffForm();
+            addStaffF.Show(this);
         }
 
         private void toolStripMenuItem16_Click(object sender, EventArgs e)
         {
-
+            staffListForm StaffListF = new staffListForm();
+            StaffListF.Show(this);
         }
 
         private void toolStripMenuItem17_Click(object sender, EventArgs e)
@@ -137,7 +138,8 @@ namespace OMP_Epupil
 
         private void toolStripMenuItem18_Click(object sender, EventArgs e)
         {
-
+            updateDeleteStaffForm StaffUpdateDlt = new updateDeleteStaffForm();
+            StaffUpdateDlt.Show();
         }
     }
 }

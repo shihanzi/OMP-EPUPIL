@@ -35,7 +35,7 @@ namespace OMP_Epupil
             {
                 MessageBox.Show("Add A Subject Name", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (course.checkCourseName(name))
+            else if (course.checkSubjectName(name))
             {
                 if (course.insertSubject(name, hrs, descr))
                 {

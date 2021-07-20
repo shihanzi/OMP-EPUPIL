@@ -35,7 +35,7 @@ namespace OMP_Epupil
         
     }
 
-    //  function to uodate a course data
+    //  function to uodate a subject data
     public bool updateSubject(int courseID, string courseName, int hoursNumber, string description) {
         
         SqlCommand command = new SqlCommand("UPDATE [dbo].[Subjects] SET [Name]=@name,[NOH] =@hrs,[Description]=@descr WHERE [Id] = @sid", mydb.getConnection);
@@ -76,7 +76,7 @@ namespace OMP_Epupil
     }
 
     // function to check if the course name already exists in the database
-    public bool checkCourseName(string subjectName, int subjectId = 0) {
+    public bool checkSubjectName(string subjectName, int subjectId = 0) {
        
         //  id <> @cID mean when the id is diffrent of the current course id
         // like if we want to edit only the course description
@@ -116,8 +116,8 @@ namespace OMP_Epupil
     }
 
 
-    //  function to return a course by id
-    public DataTable getCourseById(int subjectID) {
+    //  function to return a subject by id
+    public DataTable getSubjectById(int subjectID) {
        
         SqlCommand command = new SqlCommand("SELECT * FROM subjects WHERE id = @sid", mydb.getConnection);
        
@@ -143,7 +143,7 @@ namespace OMP_Epupil
     }
     
     //  function to return the total courses in the database
-    public string totalCourses() {
+    public string totalSubjects() {
         return execCount("SELECT COUNT(*) FROM [dbo].[Subjects]");
     }
 

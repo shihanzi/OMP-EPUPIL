@@ -54,7 +54,7 @@ namespace OMP_Epupil
                 //  display the selected course from the combobox data 
                 int id = Convert.ToInt32(ComboBoxCourse.SelectedValue);
                 DataTable table = new DataTable();
-                table = course.getCourseById(id);
+                table = course.getSubjectById(id);
                 TextBoxCourseName.Text = table.Rows[0][1].ToString();
                 NumericUpDownHours.Value = Int32.Parse(table.Rows[0][2].ToString());
                 TextBoxDescription.Text = table.Rows[0][3].ToString();
@@ -72,18 +72,18 @@ namespace OMP_Epupil
             int id = (int) ComboBoxCourse.SelectedValue;
 
             // check if the course name already exist & and it's not the current course using the id
-            if (!course.checkCourseName(name, Convert.ToInt32(ComboBoxCourse.SelectedValue)))
+            if (!course.checkSubjectName(name, Convert.ToInt32(ComboBoxCourse.SelectedValue)))
             {
-                MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("This Subject Name Already Exist", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else if (course.updateSubject(id, name, hrs, descr))
             {
-                MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subject Updated", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 fillCombo(ComboBoxCourse.SelectedIndex);
             }
             else
             {
-                MessageBox.Show("Course Not Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subject Not Updated", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

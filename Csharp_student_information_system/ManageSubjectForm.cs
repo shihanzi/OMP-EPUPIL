@@ -36,7 +36,7 @@ namespace OMP_Epupil
             ListBoxCourses.SelectedItem = null;
 
             // display the total Subjects number
-            LabelTotalCourses.Text = ("Total Subjects: " + subject.totalCourses());
+            LabelTotalCourses.Text = ("Total Subjects: " + subject.totalSubjects());
         }
 
         // method to show data depending on the index
@@ -56,7 +56,7 @@ namespace OMP_Epupil
         }
 
 
-        // listbox click -> display the selected course data
+        // listbox click -> display the selected subject data
         private void ListBoxCourses_Click(object sender, EventArgs e)
         {
             DataRowView drv = (DataRowView)ListBoxCourses.SelectedItem;
@@ -81,7 +81,7 @@ namespace OMP_Epupil
                 MessageBox.Show("Add A Subject Name", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
-            else if (subject.checkCourseName(name))
+            else if (subject.checkSubjectName(name))
             {
                 if (subject.insertSubject(name, hrs, descr))
                 {
@@ -111,7 +111,7 @@ namespace OMP_Epupil
             int id = int.Parse(TextBoxID.Text);
 
             // check if the course name already exist & and it's not the current course using the id
-            if (!subject.checkCourseName(name, Convert.ToInt32(TextBoxID.Text)))
+            if (!subject.checkSubjectName(name, Convert.ToInt32(TextBoxID.Text)))
             {
                 MessageBox.Show("This Subject Name Already Exist", "Edit Subject", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }

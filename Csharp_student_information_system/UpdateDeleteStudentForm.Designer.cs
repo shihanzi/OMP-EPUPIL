@@ -235,11 +235,11 @@
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.ForeColor = System.Drawing.Color.White;
-            this.Label3.Location = new System.Drawing.Point(23, 159);
+            this.Label3.Location = new System.Drawing.Point(0, 159);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(91, 20);
+            this.Label3.Size = new System.Drawing.Size(117, 20);
             this.Label3.TabIndex = 40;
-            this.Label3.Text = "BirthDate:";
+            this.Label3.Text = "Date of Birth:";
             // 
             // TextBoxLname
             // 
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(731, 380);
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.ButtonUploadImage);
