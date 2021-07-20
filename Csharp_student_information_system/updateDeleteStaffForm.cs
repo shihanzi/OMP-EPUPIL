@@ -22,7 +22,55 @@ namespace OMP_Epupil
 
         private void ButtonEditStudent_Click(object sender, EventArgs e)
         {
+            int id;
+            string fname = Txt_FirstName.Text;
+            string lname = Txt_StaffLastName.Text;
+            DateTime bdate = Dtp_StaffDOB.Value;
+            string phone = Txt_StaffPhone.Text;
+            string adrs = TextBoxAddress.Text;
 
+            string gender = "Male";
+
+            if (RadioButtonFemale.Checked)
+            {
+                gender = "Female";
+            }
+
+            MemoryStream pic = new MemoryStream();
+            int born_year = Dtp_StaffDOB.Value.Year;
+            int this_year = DateTime.Now.Year;
+            //  allow only students age between 10 - 100;
+            if (((this_year - born_year) < 18) || ((this_year - born_year) > 100))
+            {
+                MessageBox.Show("The Staff Age Must Be Between 18 and 100 year", "Birth Date Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (verif())
+            {
+                try
+                {
+                    id = Convert.ToInt32(TxtID.Text);
+
+                    PictureBoxStaffImage.Image.Save(pic, PictureBoxStaffImage.Image.RawFormat);
+                    if (staff.updateStaffs(id, fname, lname, bdate, gender, phone, adrs, pic))
+                    {
+                        MessageBox.Show("Staff Information Updated", "Edit Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "Edit Staff", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Edit Staff", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Empty Fields", "Edit Staff", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void TxtID_TextChanged(object sender, EventArgs e)
@@ -53,7 +101,7 @@ namespace OMP_Epupil
                     RadioButtonMale.Checked = true;
                 }
 
-               
+
                 Txt_StaffPhone.Text = table.Rows[0]["Phone"].ToString();
                 TextBoxAddress.Text = table.Rows[0]["Address"].ToString();
                 Cmb_JobType.Text = table.Rows[0]["Job Category"].ToString();
@@ -73,12 +121,29 @@ namespace OMP_Epupil
 
         private void updateDeleteStaffForm_Load(object sender, EventArgs e)
         {
-            
+
             Cmb_JobType.DisplayMember = "label";
             Cmb_JobType.ValueMember = "id";
 
             // set the selected combo item to nothing
             Cmb_JobType.SelectedItem = null;
+        }
+        //  create a function to verify data
+        bool verif()
+        {
+            if ((TxtID.Text.Trim() == "")
+                        || (Txt_FirstName.Text.Trim() == "")
+                        || (Txt_StaffLastName.Text.Trim() == "")
+                        || (TextBoxAddress.Text.Trim() == "")
+                        || (Txt_StaffPhone.Text.Trim() == "")
+                        || (PictureBoxStaffImage.Image == null))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

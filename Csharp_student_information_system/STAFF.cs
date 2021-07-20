@@ -76,7 +76,7 @@ namespace OMP_Epupil
             //  function to update a student information
             public bool updateStaffs(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
             {
-                SqlCommand command = new SqlCommand("UPDATE [dbo].[Staffs] SET [Firstname]=@fn,[Lastname]=@ln,[DOB]=@bdt,[Gender]=@gdr,[Phone]=@phn,[Address]=@adrs,[Picture]=@pic WHERE id=@Id", mydb.getConnection);
+                SqlCommand command = new SqlCommand("UPDATE [dbo].[Staffs] SET [First Name]=@fn,[Last Name]=@ln,[DOB]=@bdt,[Gender]=@gdr,[Phone]=@phn,[Address]=@adrs,[Picture]=@pic WHERE id=@Id", mydb.getConnection);
 
                 command.Parameters.Add("@Id", System.Data.SqlDbType.Int).Value = id;
                 command.Parameters.Add("@fn", System.Data.SqlDbType.VarChar).Value = fname;

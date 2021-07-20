@@ -49,7 +49,7 @@ namespace OMP_Epupil
             this.Cmb_JobType = new System.Windows.Forms.ComboBox();
             this.PictureBoxStaffImage = new System.Windows.Forms.PictureBox();
             this.ButtonRemove = new System.Windows.Forms.Button();
-            this.ButtonEditStudent = new System.Windows.Forms.Button();
+            this.ButtonEditStaff = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.Txt_StaffLastName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -268,20 +268,20 @@ namespace OMP_Epupil
             this.ButtonRemove.Text = "Remove";
             this.ButtonRemove.UseVisualStyleBackColor = false;
             // 
-            // ButtonEditStudent
+            // ButtonEditStaff
             // 
-            this.ButtonEditStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
-            this.ButtonEditStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonEditStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonEditStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonEditStudent.ForeColor = System.Drawing.Color.White;
-            this.ButtonEditStudent.Location = new System.Drawing.Point(248, 377);
-            this.ButtonEditStudent.Name = "ButtonEditStudent";
-            this.ButtonEditStudent.Size = new System.Drawing.Size(148, 40);
-            this.ButtonEditStudent.TabIndex = 72;
-            this.ButtonEditStudent.Text = "Edit";
-            this.ButtonEditStudent.UseVisualStyleBackColor = false;
-            this.ButtonEditStudent.Click += new System.EventHandler(this.ButtonEditStudent_Click);
+            this.ButtonEditStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+            this.ButtonEditStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonEditStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonEditStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonEditStaff.ForeColor = System.Drawing.Color.White;
+            this.ButtonEditStaff.Location = new System.Drawing.Point(248, 377);
+            this.ButtonEditStaff.Name = "ButtonEditStaff";
+            this.ButtonEditStaff.Size = new System.Drawing.Size(148, 40);
+            this.ButtonEditStaff.TabIndex = 72;
+            this.ButtonEditStaff.Text = "Edit";
+            this.ButtonEditStaff.UseVisualStyleBackColor = false;
+            this.ButtonEditStaff.Click += new System.EventHandler(this.ButtonEditStudent_Click);
             // 
             // buttonFind
             // 
@@ -314,7 +314,7 @@ namespace OMP_Epupil
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Txt_StaffLastName);
             this.Controls.Add(this.buttonFind);
-            this.Controls.Add(this.ButtonEditStudent);
+            this.Controls.Add(this.ButtonEditStaff);
             this.Controls.Add(this.ButtonRemove);
             this.Controls.Add(this.PictureBoxStaffImage);
             this.Controls.Add(this.Cmb_JobType);
@@ -362,7 +362,7 @@ namespace OMP_Epupil
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.PictureBox PictureBoxStaffImage;
         internal System.Windows.Forms.Button ButtonRemove;
-        internal System.Windows.Forms.Button ButtonEditStudent;
+        internal System.Windows.Forms.Button ButtonEditStaff;
         internal System.Windows.Forms.Button buttonFind;
         internal System.Windows.Forms.TextBox TxtID;
         internal System.Windows.Forms.TextBox Txt_FirstName;
