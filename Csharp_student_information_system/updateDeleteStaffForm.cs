@@ -28,6 +28,7 @@ namespace OMP_Epupil
             DateTime bdate = Dtp_StaffDOB.Value;
             string phone = Txt_StaffPhone.Text;
             string adrs = TextBoxAddress.Text;
+            string jc = Cmb_JobType.Text;
 
             string gender = "Male";
 
@@ -51,7 +52,7 @@ namespace OMP_Epupil
                     id = Convert.ToInt32(TxtID.Text);
 
                     PictureBoxStaffImage.Image.Save(pic, PictureBoxStaffImage.Image.RawFormat);
-                    if (staff.updateStaffs(id, fname, lname, bdate, gender, phone, adrs, pic))
+                    if (staff.updateStaffs(id, fname, lname, bdate, gender, phone, adrs,jc, pic))
                     {
                         MessageBox.Show("Staff Information Updated", "Edit Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
