@@ -26,7 +26,7 @@ namespace OMP_Epupil
         private void PrintScoresForm_Load(object sender, EventArgs e)
         {
             // populate DataGridViewStudentsScore with students scores
-            DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+            DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
 
             // populate dataGridView1 with students id, first name, last name 
             dataGridView1.DataSource = student.getStudents(new SqlCommand("SELECT id, Firstname, Lastname FROM Students"));
@@ -41,14 +41,14 @@ namespace OMP_Epupil
         // on listbox click -> display scores for the selected course
         private void ListBoxCourses_Click(object sender, EventArgs e)
         {
-            DataGridViewStudentsScore.DataSource = score.getCourseScores(int.Parse(ListBoxCourses.SelectedValue.ToString()));
+            DataGridViewStudentsScore.DataSource = score.getSubjectMarks(int.Parse(ListBoxCourses.SelectedValue.ToString()));
         }
 
 
         // on dataGridView1 click -> display scores of the selected student
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            DataGridViewStudentsScore.DataSource = score.getStudentScores(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+            DataGridViewStudentsScore.DataSource = score.getStudentMarks(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
         }
 
 
@@ -85,7 +85,7 @@ namespace OMP_Epupil
         private void labelReset_Click(object sender, EventArgs e)
         {
             // populate DataGridViewStudentsScore with students scores
-            DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+            DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
         }
     }
 }

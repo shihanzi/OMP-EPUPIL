@@ -17,17 +17,17 @@ namespace OMP_Epupil
 
 
             //  function to insert a new staff
-            public bool insertStaff(string fname, string lname, DateTime bdate, string gender, string phone, string address, string jb, MemoryStream picture)
+            public bool insertStaff(string fname, string lname, DateTime bdate, string gender, string phone, string address, string jc, MemoryStream picture)
             {
-                SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Staffs] ([First Name], [Last Name], [DOB],[Gender], [Phone], [Address],[Job Category], [Picture])" + " VALUES (@fn, @ln, @bdt, @gdr, @phn, @address,@jb, @pic)", mydb.getConnection);
+                SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Staffs] ([First Name], [Last Name], [DOB],[Gender], [Phone], [Address],[Job Category], [Picture])" + " VALUES (@fn, @ln, @bdate, @gdr, @phn, @address,@jc, @pic)", mydb.getConnection);
 
                 command.Parameters.Add("@fn", System.Data.SqlDbType.VarChar).Value = fname;
                 command.Parameters.Add("@ln", System.Data.SqlDbType.VarChar).Value = lname;
-                command.Parameters.Add("@bdt", System.Data.SqlDbType.DateTime).Value = bdate;
+                command.Parameters.Add("@bdate", System.Data.SqlDbType.DateTime).Value = bdate;
                 command.Parameters.Add("@gdr", System.Data.SqlDbType.VarChar).Value = gender;
                 command.Parameters.Add("@phn", System.Data.SqlDbType.VarChar).Value = phone;
-                command.Parameters.Add("@adrs", System.Data.SqlDbType.VarChar).Value = address;
-                command.Parameters.Add("@jb", System.Data.SqlDbType.VarChar).Value = jb;
+                command.Parameters.Add("@address", System.Data.SqlDbType.VarChar).Value = address;
+                command.Parameters.Add("@jc", System.Data.SqlDbType.VarChar).Value = jc;
                 command.Parameters.Add("@pic", System.Data.SqlDbType.Image).Value = picture.ToArray();
 
                 mydb.openConnection();

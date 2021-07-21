@@ -46,12 +46,12 @@ namespace OMP_Epupil
             this.TextBoxAddress = new System.Windows.Forms.TextBox();
             this.Label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Cmb_JobType = new System.Windows.Forms.ComboBox();
             this.PictureBoxStaffImage = new System.Windows.Forms.PictureBox();
             this.ButtonRemove = new System.Windows.Forms.Button();
             this.ButtonEditStaff = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.Txt_StaffLastName = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStaffImage)).BeginInit();
             this.SuspendLayout();
@@ -236,14 +236,6 @@ namespace OMP_Epupil
             this.label9.TabIndex = 68;
             this.label9.Text = "Job Type:";
             // 
-            // Cmb_JobType
-            // 
-            this.Cmb_JobType.FormattingEnabled = true;
-            this.Cmb_JobType.Location = new System.Drawing.Point(153, 314);
-            this.Cmb_JobType.Name = "Cmb_JobType";
-            this.Cmb_JobType.Size = new System.Drawing.Size(121, 21);
-            this.Cmb_JobType.TabIndex = 69;
-            // 
             // PictureBoxStaffImage
             // 
             this.PictureBoxStaffImage.BackColor = System.Drawing.Color.Gainsboro;
@@ -267,6 +259,7 @@ namespace OMP_Epupil
             this.ButtonRemove.TabIndex = 71;
             this.ButtonRemove.Text = "Remove";
             this.ButtonRemove.UseVisualStyleBackColor = false;
+            this.ButtonRemove.Click += new System.EventHandler(this.ButtonRemove_Click);
             // 
             // ButtonEditStaff
             // 
@@ -306,18 +299,32 @@ namespace OMP_Epupil
             this.Txt_StaffLastName.Size = new System.Drawing.Size(243, 30);
             this.Txt_StaffLastName.TabIndex = 74;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Permenant",
+            "Part Time",
+            "Visitng",
+            "Special"});
+            this.comboBox1.Location = new System.Drawing.Point(153, 311);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 98;
+            // 
             // updateDeleteStaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Txt_StaffLastName);
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.ButtonEditStaff);
             this.Controls.Add(this.ButtonRemove);
             this.Controls.Add(this.PictureBoxStaffImage);
-            this.Controls.Add(this.Cmb_JobType);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.TextBoxAddress);
@@ -367,7 +374,7 @@ namespace OMP_Epupil
         internal System.Windows.Forms.TextBox TxtID;
         internal System.Windows.Forms.TextBox Txt_FirstName;
         internal System.Windows.Forms.TextBox Txt_StaffPhone;
-        internal System.Windows.Forms.ComboBox Cmb_JobType;
         internal System.Windows.Forms.TextBox Txt_StaffLastName;
+        internal System.Windows.Forms.ComboBox comboBox1;
     }
 }

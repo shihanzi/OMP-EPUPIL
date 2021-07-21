@@ -141,5 +141,11 @@ namespace OMP_Epupil
             updateDeleteStaffForm StaffUpdateDlt = new updateDeleteStaffForm();
             StaffUpdateDlt.Show();
         }
+
+        private void toolStripMenuItem19_Click(object sender, EventArgs e)
+        {
+            ManageStaffForm StaffManageFrm = new ManageStaffForm();
+            StaffManageFrm.Show();
+        }
     }
 }

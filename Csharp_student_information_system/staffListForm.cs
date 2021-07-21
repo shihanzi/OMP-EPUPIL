@@ -68,8 +68,8 @@ namespace OMP_Epupil
 
             updateDeletStaff.Txt_StaffPhone.Text = Dgv_StaffList.CurrentRow.Cells[5].Value.ToString();
             updateDeletStaff.TextBoxAddress.Text = Dgv_StaffList.CurrentRow.Cells[6].Value.ToString();
-            updateDeletStaff.Cmb_JobType.Text = Dgv_StaffList.CurrentRow.Cells[7].Value.ToString();
-
+            updateDeletStaff.comboBox1.Text = Dgv_StaffList.CurrentRow.Cells[7].Value.ToString();
+            
             
 
             // image

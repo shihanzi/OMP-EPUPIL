@@ -29,7 +29,7 @@ namespace OMP_Epupil
             // course id - label
             // score value
 
-            DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+            DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
 
         }
 
@@ -43,10 +43,10 @@ namespace OMP_Epupil
 
             if ( MessageBox.Show("Do You Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
             {
-                if (score.deleteScore(studentID, subjectID))
+                if (score.deleteMarks(studentID, subjectID))
                 {
                     MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+                    DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
                 }
                 else
                 {

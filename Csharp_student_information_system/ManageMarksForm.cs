@@ -27,7 +27,7 @@ namespace OMP_Epupil
         private void ManageScoresForm_Load(object sender, EventArgs e)
         {
             // populate datagridview with students scores
-            DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+            DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
 
             // populate combobox with courses id and name
             ComboBoxCourse.DataSource = course.getAllCourses();
@@ -40,7 +40,7 @@ namespace OMP_Epupil
         private void ButtonShowScores_Click(object sender, EventArgs e)
         {
             data = "score";
-            DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+            DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
         }
 
 
@@ -100,9 +100,9 @@ namespace OMP_Epupil
                 string description = TextBoxDescription.Text;
 
                 // check if the score is already set for this student on this score
-                if (!score.studentScoreExist(studentID, courseID))
+                if (!score.studentMarksExist(studentID, courseID))
                 {
-                    if (score.insertScore(studentID, courseID, scoreValue, description))
+                    if (score.insertMarks(studentID, courseID, scoreValue, description))
                     {
                         MessageBox.Show("Student Score Inserted", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -135,10 +135,10 @@ namespace OMP_Epupil
 
             if (MessageBox.Show("Do Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (score.deleteScore(studentID, courseID))
+                if (score.deleteMarks(studentID, courseID))
                 {
                     MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DataGridViewStudentsScore.DataSource = score.getStudentsScore();
+                    DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
                 }
                 else
                 {

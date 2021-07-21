@@ -16,7 +16,7 @@ namespace OMP_Epupil
 
 
         //  function to insert a new marks to a student on a specific subject
-        public bool insertScore(int studentID, int subjectID, double marksValue, string description)
+        public bool insertMarks(int studentID, int subjectID, double marksValue, string description)
         {
             SqlCommand command = new SqlCommand("INSERT INTO [dbo].[Marks]([StudentId],[SubjectId],[Marks],[Description]) VALUES (@stid,@suid,@mar" +
                 ",@descr)", mydb.getConnection);
@@ -41,7 +41,7 @@ namespace OMP_Epupil
 
 
         // function to check if a score is already asigned to this student on this course
-        public bool studentScoreExist(int studentId, int courseID)
+        public bool studentMarksExist(int studentId, int courseID)
         {
             SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
             
@@ -66,7 +66,7 @@ namespace OMP_Epupil
 
 
         // method to get the average marks by subject
-        public DataTable getAvgScoreByCourse()
+        public DataTable getAvgMarksBySubject()
         {
             SqlCommand command = new SqlCommand();
             
@@ -85,7 +85,7 @@ namespace OMP_Epupil
 
 
         // method to get students marks
-       public DataTable getStudentsScore()
+       public DataTable getStudentsMarks()
         {
             SqlCommand command = new SqlCommand();
             
@@ -104,7 +104,7 @@ namespace OMP_Epupil
 
 
         // get course scores
-       public DataTable getCourseScores(int subjectId)
+       public DataTable getSubjectMarks(int subjectId)
        {
            SqlCommand command = new SqlCommand();
            
@@ -122,7 +122,7 @@ namespace OMP_Epupil
 
 
         // get student's scores by id
-       public DataTable getStudentScores(int studentId)
+       public DataTable getStudentMarks(int studentId)
        {
            SqlCommand command = new SqlCommand();
            
@@ -140,7 +140,7 @@ namespace OMP_Epupil
 
 
         // delete score using student id, and course id
-        public bool deleteScore(int studentID, int courseID)
+        public bool deleteMarks(int studentID, int courseID)
         {
             SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
             

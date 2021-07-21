@@ -28,7 +28,7 @@ namespace OMP_Epupil
             DateTime bdate = Dtp_StaffDOB.Value;
             string phone = Txt_StaffPhone.Text;
             string adrs = TextBoxAddress.Text;
-            string jc = Cmb_JobType.Text;
+            string jc = comboBox1.Text;
 
             string gender = "Male";
 
@@ -105,7 +105,7 @@ namespace OMP_Epupil
 
                 Txt_StaffPhone.Text = table.Rows[0]["Phone"].ToString();
                 TextBoxAddress.Text = table.Rows[0]["Address"].ToString();
-                Cmb_JobType.Text = table.Rows[0]["Job Category"].ToString();
+                comboBox1.Text = table.Rows[0]["Job Category"].ToString();
 
 
                 byte[] pic = (byte[])table.Rows[0]["Picture"];
@@ -123,11 +123,11 @@ namespace OMP_Epupil
         private void updateDeleteStaffForm_Load(object sender, EventArgs e)
         {
 
-            Cmb_JobType.DisplayMember = "label";
-            Cmb_JobType.ValueMember = "id";
+            comboBox1.DisplayMember = "label";
+            comboBox1.ValueMember = "id";
 
             // set the selected combo item to nothing
-            Cmb_JobType.SelectedItem = null;
+            comboBox1.SelectedItem = null;
         }
         //  create a function to verify data
         bool verif()
@@ -146,5 +146,43 @@ namespace OMP_Epupil
                 return true;
             }
         }
+
+        private void ButtonRemove_Click(object sender, EventArgs e)
+        {
+
+            //  delete student
+            try
+            {
+                int staffId = Convert.ToInt32(TxtID.Text);
+                //  display a confirmation message before the delete
+                if ((MessageBox.Show("Are You Sure You Want To Delete This Staff", "Delete Staff", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                {
+                    if (staff.deleteStaffs(staffId))
+                    {
+                        MessageBox.Show("Staff Deleted", "Delete Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //  clear fields after delete
+                        TxtID.Text = "";
+                        Txt_FirstName.Text = "";
+                        Txt_StaffLastName.Text = "";
+                        TextBoxAddress.Text = "";
+                        Txt_StaffPhone.Text = "";
+                        Dtp_StaffDOB.Value = DateTime.Now;
+                        PictureBoxStaffImage.Image = null;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Staff Not Deleted", "Delete Staff", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter A Valid ID", "Delete Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }
+

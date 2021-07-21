@@ -18,10 +18,10 @@ namespace OMP_Epupil
         }
 
         // on form load populate the datagridview with average score by course
-        private void avgScoreByCourseForm_Load(object sender, EventArgs e)
+        private void avgMarksBySubjectForm_Load(object sender, EventArgs e)
         {
             MARKS score = new MARKS();
-            DataGridViewAvgScore.DataSource = score.getAvgScoreByCourse();
+            DataGridViewAvgScore.DataSource = score.getAvgMarksBySubject();
         }
     }
 }

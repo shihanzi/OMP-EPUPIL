@@ -289,6 +289,9 @@ namespace OMP_Epupil
             }
         }
 
+        private void LabelTotalStudents_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

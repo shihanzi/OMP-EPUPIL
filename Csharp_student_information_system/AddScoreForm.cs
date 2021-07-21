@@ -57,9 +57,9 @@ namespace OMP_Epupil
                 string description = TextBoxDescription.Text;
 
                 // check if the score is already set for this student on this score 
-                if (!score.studentScoreExist(studentID, courseID))
+                if (!score.studentMarksExist(studentID, courseID))
                 {
-                    if (score.insertScore(studentID, courseID, scoreValue, description))
+                    if (score.insertMarks(studentID, courseID, scoreValue, description))
                     {
                         MessageBox.Show("Student Marks Inserted", "Add Marks", MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }

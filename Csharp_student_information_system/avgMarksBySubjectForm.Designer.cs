@@ -50,10 +50,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
             this.ClientSize = new System.Drawing.Size(282, 262);
             this.Controls.Add(this.DataGridViewAvgScore);
-            this.Name = "avgScoreByCourseForm";
+            this.Name = "avgMarksBySubjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "avgScoreByCourseForm";
-            this.Load += new System.EventHandler(this.avgScoreByCourseForm_Load);
+            this.Text = "avgMarksBySubjectForm";
+            this.Load += new System.EventHandler(this.avgMarksBySubjectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAvgScore)).EndInit();
             this.ResumeLayout(false);
 

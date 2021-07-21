@@ -96,6 +96,12 @@
     <Compile Include="avgMarksBySubjectForm.Designer.cs">
       <DependentUpon>avgMarksBySubjectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStaffForm.Designer.cs">
+      <DependentUpon>ManageStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SCHOOL.cs" />
     <Compile Include="STAFF.cs" />
     <Compile Include="staffListForm.cs">
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStaffForm.resx">
+      <DependentUpon>ManageStaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageSubjectForm.resx">
       <DependentUpon>ManageSubjectForm.cs</DependentUpon>
