@@ -147,5 +147,27 @@ namespace OMP_Epupil
             ManageStaffForm StaffManageFrm = new ManageStaffForm();
             StaffManageFrm.Show();
         }
+
+    
+
+        private void toolStripMenuItem23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripClass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripAddClass_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

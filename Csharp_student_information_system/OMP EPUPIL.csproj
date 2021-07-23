@@ -78,11 +78,11 @@
     <Compile Include="AddSubjectForm.Designer.cs">
       <DependentUpon>AddSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddScoreForm.cs">
+    <Compile Include="AddMarksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddScoreForm.Designer.cs">
-      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    <Compile Include="AddMarksForm.Designer.cs">
+      <DependentUpon>AddMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +102,7 @@
     <Compile Include="ManageStaffForm.Designer.cs">
       <DependentUpon>ManageStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OMPClass.cs" />
     <Compile Include="SCHOOL.cs" />
     <Compile Include="STAFF.cs" />
     <Compile Include="staffListForm.cs">
@@ -229,8 +230,8 @@
     <EmbeddedResource Include="AddSubjectForm.resx">
       <DependentUpon>AddSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddScoreForm.resx">
-      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    <EmbeddedResource Include="AddMarksForm.resx">
+      <DependentUpon>AddMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>

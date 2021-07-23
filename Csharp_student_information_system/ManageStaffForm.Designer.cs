@@ -120,7 +120,7 @@ namespace OMP_Epupil
             this.ButtonEdit.Name = "ButtonEdit";
             this.ButtonEdit.Size = new System.Drawing.Size(126, 40);
             this.ButtonEdit.TabIndex = 85;
-            this.ButtonEdit.Text = "Edit";
+            this.ButtonEdit.Text = "Update";
             this.ButtonEdit.UseVisualStyleBackColor = false;
             this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 

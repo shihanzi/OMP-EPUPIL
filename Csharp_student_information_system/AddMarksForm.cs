@@ -28,7 +28,7 @@ namespace OMP_Epupil
         {
             // populate the combobox with all courses
             ComboBoxCourse.DataSource = course.getAllCourses();
-            ComboBoxCourse.DisplayMember = "label";
+            ComboBoxCourse.DisplayMember = "Name";
             ComboBoxCourse.ValueMember = "id";
 
             // populate the datagridview with all students
