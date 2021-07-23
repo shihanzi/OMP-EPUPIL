@@ -167,7 +167,8 @@ namespace OMP_Epupil
 
         private void toolStripAddClass_Click(object sender, EventArgs e)
         {
-           
+            AddClassForm AddClsFrm = new AddClassForm();
+            AddClsFrm.Show();
         }
     }
 }

@@ -616,13 +616,13 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
-        private System.Windows.Forms.ToolStripMenuItem toolStripAddClass;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripRemoveClass;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripManageClass;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         internal System.Windows.Forms.ToolStripMenuItem toolStripClass;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripAddClass;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripRemoveClass;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripManageClass;
     }
 }
