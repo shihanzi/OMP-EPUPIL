@@ -13,14 +13,15 @@ namespace OMP_Epupil
         MY_DB mydb = new MY_DB();
         
         //  function to insert a new course
-        public bool insertClass(string subjectName, int hoursNumber, string description)
+        public bool insertClass(string ompclass, string section, string description)
         {
 
-            SqlCommand command = new SqlCommand("INSERT INTO [dbo].[OMPClass] ([Name],[NOH],[Description]) VALUES (@name,@hrs,@descr)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO [dbo].[OMPClass] ([Class],[Section],[Description]) VALUES (@Class,@Section,@description)", mydb.getConnection);
 
-            command.Parameters.Add("@name", SqlDbType.VarChar).Value = subjectName;
-            command.Parameters.Add("@hrs", SqlDbType.Int).Value = hoursNumber;
-            command.Parameters.Add("@descr", SqlDbType.VarChar).Value = description;
+            
+            command.Parameters.Add("@Class", SqlDbType.VarChar).Value = ompclass;
+            command.Parameters.Add("@Section", SqlDbType.VarChar).Value = section;
+            command.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
 
             mydb.openConnection();
 
@@ -35,16 +36,16 @@ namespace OMP_Epupil
 
         }
 
-        //  function to uodate a subject data
-        public bool updateClass(int courseID, string courseName, int hoursNumber, string description)
+        //  function to update a class data
+        public bool updateClass(int id,string ompclass, string section, string description)
         {
 
-            SqlCommand command = new SqlCommand("UPDATE [dbo].[OMPClass] SET [Name]=@name,[NOH] =@hrs,[Description]=@descr WHERE [Id] = @sid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("UPDATE [dbo].[OMPClass] SET [Class]=@Class,[Section]=@section,[Description]=@description WHERE [Id] = @id", mydb.getConnection);
 
-            command.Parameters.Add("@sid", SqlDbType.Int).Value = courseID;
-            command.Parameters.Add("@name", SqlDbType.VarChar).Value = courseName;
-            command.Parameters.Add("@hrs", SqlDbType.Int).Value = hoursNumber;
-            command.Parameters.Add("@descr", SqlDbType.VarChar).Value = description;
+            command.Parameters.Add("@Id",SqlDbType.VarChar).Value = id;
+            command.Parameters.Add("@class", SqlDbType.VarChar).Value = ompclass;
+            command.Parameters.Add("@section", SqlDbType.VarChar).Value = section;
+            command.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
 
             mydb.openConnection();
 
@@ -61,36 +62,35 @@ namespace OMP_Epupil
 
 
         //  function to remove a course by id
-        public bool deleteSubject(int subjectID)
+        public bool deleteClass(int Id)
         {
-
-            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[OMPClass] WHERE [Id] = @SID", mydb.getConnection);
-
-            command.Parameters.Add("@SID", SqlDbType.Int).Value = subjectID;
-
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[OMPClass] WHERE [id] = @Id", mydb.getConnection);
+            command.Parameters.Add("@Id", SqlDbType.Int).Value = Id;
             mydb.openConnection();
-
-            if (command.ExecuteNonQuery() == 1)
+            if ((command.ExecuteNonQuery() == 1))
             {
+                mydb.closeConnection();
                 return true;
             }
             else
             {
+                mydb.closeConnection();
                 return false;
             }
 
         }
 
         // function to check if the course name already exists in the database
-        public bool checkSubjectName(string subjectName, int subjectId = 0)
+        public bool checkClassName(int Id,int ompclass, string section, string description)
         {
 
             //  id <> @cID mean when the id is diffrent of the current course id
             // like if we want to edit only the course description
-            SqlCommand command = new SqlCommand("SELECT * FROM OMPClass WHERE Name=@sName And id <> @sID", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM OMPClass WHERE Class=@Class And id <> @ID", mydb.getConnection);
 
-            command.Parameters.Add("@sName", SqlDbType.VarChar).Value = subjectName;
-            command.Parameters.Add("@sID", SqlDbType.Int).Value = subjectId;
+            command.Parameters.Add("@Class", SqlDbType.Int).Value = ompclass;
+            command.Parameters.Add("@section", SqlDbType.VarChar).Value = section;
+            command.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -111,7 +111,7 @@ namespace OMP_Epupil
         }
 
         //  function to get all courses from the database
-        public DataTable getAllCourses()
+        public DataTable getAllClass()
         {
 
             SqlCommand command = new SqlCommand("SELECT * FROM OMPClass", mydb.getConnection);
@@ -127,19 +127,13 @@ namespace OMP_Epupil
 
 
         //  function to return a subject by id
-        public DataTable getSubjectById(int subjectID)
+        public DataTable getClassById(SqlCommand command)
         {
 
-            SqlCommand command = new SqlCommand("SELECT * FROM OMPClass WHERE id = @sid", mydb.getConnection);
-
-            command.Parameters.Add("@sid", SqlDbType.VarChar).Value = subjectID;
-
+            command.Connection = mydb.getConnection;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-
             DataTable table = new DataTable();
-
             adapter.Fill(table);
-
             return table;
         }
 

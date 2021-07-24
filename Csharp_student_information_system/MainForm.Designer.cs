@@ -422,8 +422,8 @@
             this.toolStripRemoveClass.BackColor = System.Drawing.Color.Red;
             this.toolStripRemoveClass.ForeColor = System.Drawing.Color.White;
             this.toolStripRemoveClass.Name = "toolStripRemoveClass";
-            this.toolStripRemoveClass.Size = new System.Drawing.Size(209, 30);
-            this.toolStripRemoveClass.Text = "Remove Class";
+            this.toolStripRemoveClass.Size = new System.Drawing.Size(300, 30);
+            this.toolStripRemoveClass.Text = "Manage / Remove Class";
             this.toolStripRemoveClass.Click += new System.EventHandler(this.toolStripMenuItem23_Click);
             // 
             // toolStripSeparator7
@@ -464,8 +464,8 @@
             this.printToolStripMenuItem2});
             this.ClassToolStripMenuItem.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassToolStripMenuItem.Name = "ClassToolStripMenuItem";
-            this.ClassToolStripMenuItem.Size = new System.Drawing.Size(81, 30);
-            this.ClassToolStripMenuItem.Text = "Marks";
+            this.ClassToolStripMenuItem.Size = new System.Drawing.Size(89, 30);
+            this.ClassToolStripMenuItem.Text = "MARKS";
             this.ClassToolStripMenuItem.Click += new System.EventHandler(this.ClassToolStripMenuItem_Click);
             // 
             // addMarksToolStripMenuItem

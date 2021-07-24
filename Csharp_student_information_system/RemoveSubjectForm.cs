@@ -18,7 +18,7 @@ namespace OMP_Epupil
         }
 
 
-        // button remove course by id
+        // button remove class by id
         private void ButtonRemoveCourse_Click(object sender, EventArgs e)
         {
             SUBJECTS course = new SUBJECTS();
@@ -26,15 +26,15 @@ namespace OMP_Epupil
             {
                 int courseID = Convert.ToInt32(TextBoxCourseID.Text);
 
-                if ((MessageBox.Show("Are Yousure You Want To Delete This Course", "Remove Course", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
+                if ((MessageBox.Show("Are Yousure You Want To Delete This Class", "Remove Class", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
                     if (course.deleteSubject(courseID))
                     {
-                        MessageBox.Show("Course Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Class Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Course Not Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Class Not Deleted", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
                 }
@@ -42,8 +42,18 @@ namespace OMP_Epupil
             }
             catch
             {
-                MessageBox.Show("Enter A Valid Numeric ID", "Remove Course", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter A Valid Numeric ID", "Remove Class", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void TextBoxCourseID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

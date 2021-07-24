@@ -109,6 +109,12 @@
       <DependentUpon>ManageStaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OMPClass.cs" />
+    <Compile Include="RemoveClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveClassForm.Designer.cs">
+      <DependentUpon>RemoveClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SCHOOL.cs" />
     <Compile Include="STAFF.cs" />
     <Compile Include="staffListForm.cs">
@@ -230,6 +236,9 @@
     <Compile Include="UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +293,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemoveClassForm.resx">
+      <DependentUpon>RemoveClassForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoveSubjectForm.resx">
       <DependentUpon>RemoveSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="staffListForm.resx">
       <DependentUpon>staffListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm.resx">
+      <DependentUpon>SubForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateDeleteSchoolForm.resx">
       <DependentUpon>UpdateDeleteSchoolForm.cs</DependentUpon>

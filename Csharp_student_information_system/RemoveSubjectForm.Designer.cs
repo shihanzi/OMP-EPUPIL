@@ -55,6 +55,7 @@
             this.TextBoxCourseID.Name = "TextBoxCourseID";
             this.TextBoxCourseID.Size = new System.Drawing.Size(169, 26);
             this.TextBoxCourseID.TabIndex = 17;
+            this.TextBoxCourseID.TextChanged += new System.EventHandler(this.TextBoxCourseID_TextChanged);
             // 
             // Label1
             // 
@@ -66,8 +67,9 @@
             this.Label1.Size = new System.Drawing.Size(179, 20);
             this.Label1.TabIndex = 16;
             this.Label1.Text = "Enter The Course ID:";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // RemoveCourseForm
+            // RemoveSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -76,7 +78,7 @@
             this.Controls.Add(this.ButtonRemoveCourse);
             this.Controls.Add(this.TextBoxCourseID);
             this.Controls.Add(this.Label1);
-            this.Name = "RemoveCourseForm";
+            this.Name = "RemoveSubjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemoveCourseForm";
             this.ResumeLayout(false);

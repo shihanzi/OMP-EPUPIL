@@ -152,7 +152,8 @@ namespace OMP_Epupil
 
         private void toolStripMenuItem23_Click(object sender, EventArgs e)
         {
-
+            UpdateRemoveClassForm updlclass = new UpdateRemoveClassForm();
+            updlclass.Show();
         }
 
         private void toolStripClass_Click(object sender, EventArgs e)

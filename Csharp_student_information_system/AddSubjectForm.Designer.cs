@@ -117,9 +117,9 @@
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(91, 27);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(55, 22);
+            this.Label1.Size = new System.Drawing.Size(70, 22);
             this.Label1.TabIndex = 15;
-            this.Label1.Text = "Label:";
+            this.Label1.Text = "Subject:";
             // 
             // AddSubjectForm
             // 

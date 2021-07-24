@@ -49,7 +49,7 @@ namespace OMP_Epupil
             }
             else
             {
-                MessageBox.Show("This Course Name Already Exists", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This Subject Name Already Exists", "Add Subject", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
