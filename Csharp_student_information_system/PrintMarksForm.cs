@@ -34,7 +34,7 @@ namespace OMP_Epupil
             // populate listbox with courses
             ListBoxCourses.DataSource = course.getAllCourses();
             ListBoxCourses.ValueMember = "id";
-            ListBoxCourses.DisplayMember = "label";
+            ListBoxCourses.DisplayMember = "Name";
         }
 
 
@@ -56,7 +56,7 @@ namespace OMP_Epupil
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
             // get desktop path
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\scores_list.txt";
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\scores_list.xls";
 
             using (var writer = new StreamWriter(path))
             {
@@ -86,6 +86,11 @@ namespace OMP_Epupil
         {
             // populate DataGridViewStudentsScore with students scores
             DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
+        }
+
+        private void ListBoxCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

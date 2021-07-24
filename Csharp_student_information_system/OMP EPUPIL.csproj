@@ -184,11 +184,11 @@
     <Compile Include="PrintSubjectForm.Designer.cs">
       <DependentUpon>PrintSubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintScoresForm.cs">
+    <Compile Include="PrintMarksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintScoresForm.Designer.cs">
-      <DependentUpon>PrintScoresForm.cs</DependentUpon>
+    <Compile Include="PrintMarksForm.Designer.cs">
+      <DependentUpon>PrintMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintStudentsForm.cs">
       <SubType>Form</SubType>
@@ -278,8 +278,8 @@
     <EmbeddedResource Include="PrintSubjectForm.resx">
       <DependentUpon>PrintSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintScoresForm.resx">
-      <DependentUpon>PrintScoresForm.cs</DependentUpon>
+    <EmbeddedResource Include="PrintMarksForm.resx">
+      <DependentUpon>PrintMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintStudentsForm.resx">
       <DependentUpon>PrintStudentsForm.cs</DependentUpon>

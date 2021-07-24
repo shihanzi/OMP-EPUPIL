@@ -38,6 +38,7 @@ namespace OMP_Epupil
             this.ClientSize = new System.Drawing.Size(964, 467);
             this.Name = "SubForm";
             this.Text = "SubForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

@@ -60,6 +60,7 @@
             this.ListBoxCourses.Size = new System.Drawing.Size(194, 329);
             this.ListBoxCourses.TabIndex = 61;
             this.ListBoxCourses.Click += new System.EventHandler(this.ListBoxCourses_Click);
+            this.ListBoxCourses.SelectedIndexChanged += new System.EventHandler(this.ListBoxCourses_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -83,7 +84,7 @@
             this.ButtonPrint.Name = "ButtonPrint";
             this.ButtonPrint.Size = new System.Drawing.Size(1030, 53);
             this.ButtonPrint.TabIndex = 63;
-            this.ButtonPrint.Text = "Print To Text File";
+            this.ButtonPrint.Text = "Export To Excel File";
             this.ButtonPrint.UseVisualStyleBackColor = false;
             this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
@@ -94,9 +95,9 @@
             this.Label4.ForeColor = System.Drawing.Color.White;
             this.Label4.Location = new System.Drawing.Point(12, 62);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(109, 20);
+            this.Label4.Size = new System.Drawing.Size(113, 20);
             this.Label4.TabIndex = 64;
-            this.Label4.Text = "Courses List";
+            this.Label4.Text = "Subjects List";
             // 
             // label1
             // 
@@ -116,9 +117,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(438, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 66;
-            this.label2.Text = "Scores List";
+            this.label2.Text = "Marks List";
             // 
             // labelReset
             // 

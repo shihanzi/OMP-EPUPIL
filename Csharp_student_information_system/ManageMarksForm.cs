@@ -31,7 +31,7 @@ namespace OMP_Epupil
 
             // populate combobox with courses id and name
             ComboBoxCourse.DataSource = course.getAllCourses();
-            ComboBoxCourse.DisplayMember = "label";
+            ComboBoxCourse.DisplayMember = "Name";
             ComboBoxCourse.ValueMember = "id";
         }
 
