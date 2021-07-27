@@ -261,5 +261,7 @@ namespace OMP_Epupil
             UpdateDeleteSchoolForm AdSch = new UpdateDeleteSchoolForm();
             AdSch.Show();
         }
+
+        
     }
 }

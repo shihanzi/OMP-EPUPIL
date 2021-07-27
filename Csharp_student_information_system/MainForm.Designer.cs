@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.Manage_Staffs = new System.Windows.Forms.GroupBox();
-            this.Add_staff = new System.Windows.Forms.Label();
-            this.Staff_List = new System.Windows.Forms.Label();
-            this.Edit_Staff = new System.Windows.Forms.Label();
             this.Delete_Staff = new System.Windows.Forms.Label();
+            this.Edit_Staff = new System.Windows.Forms.Label();
+            this.Staff_List = new System.Windows.Forms.Label();
+            this.Add_staff = new System.Windows.Forms.Label();
             this.Student_List = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Lbl_AddStudent = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.Manage_Subject = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.Btn_UpdateClass = new System.Windows.Forms.Button();
             this.Btn_AddClass = new System.Windows.Forms.Button();
             this.Btn_DeleteSubject = new System.Windows.Forms.Button();
@@ -60,12 +62,14 @@
             this.Btn_EditStaff = new System.Windows.Forms.Button();
             this.Btn_StaffList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Btn_Exit = new System.Windows.Forms.Button();
             this.Manage_Staffs.SuspendLayout();
             this.Student_List.SuspendLayout();
             this.Manage_Subject.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Manage_Staffs
@@ -80,30 +84,21 @@
             this.Manage_Staffs.Controls.Add(this.Add_staff);
             this.Manage_Staffs.Controls.Add(this.button1);
             this.Manage_Staffs.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manage_Staffs.Location = new System.Drawing.Point(7, 34);
+            this.Manage_Staffs.Location = new System.Drawing.Point(243, 36);
             this.Manage_Staffs.Name = "Manage_Staffs";
             this.Manage_Staffs.Size = new System.Drawing.Size(450, 307);
             this.Manage_Staffs.TabIndex = 7;
             this.Manage_Staffs.TabStop = false;
             this.Manage_Staffs.Text = "Manage Staffs";
             // 
-            // Add_staff
+            // Delete_Staff
             // 
-            this.Add_staff.AutoSize = true;
-            this.Add_staff.Location = new System.Drawing.Point(27, 111);
-            this.Add_staff.Name = "Add_staff";
-            this.Add_staff.Size = new System.Drawing.Size(76, 19);
-            this.Add_staff.TabIndex = 7;
-            this.Add_staff.Text = "Add Staff";
-            // 
-            // Staff_List
-            // 
-            this.Staff_List.AutoSize = true;
-            this.Staff_List.Location = new System.Drawing.Point(31, 255);
-            this.Staff_List.Name = "Staff_List";
-            this.Staff_List.Size = new System.Drawing.Size(72, 19);
-            this.Staff_List.TabIndex = 9;
-            this.Staff_List.Text = "Staff List";
+            this.Delete_Staff.AutoSize = true;
+            this.Delete_Staff.Location = new System.Drawing.Point(316, 182);
+            this.Delete_Staff.Name = "Delete_Staff";
+            this.Delete_Staff.Size = new System.Drawing.Size(92, 19);
+            this.Delete_Staff.TabIndex = 13;
+            this.Delete_Staff.Text = "Delete Staff";
             // 
             // Edit_Staff
             // 
@@ -114,14 +109,23 @@
             this.Edit_Staff.TabIndex = 12;
             this.Edit_Staff.Text = "Edit Staff";
             // 
-            // Delete_Staff
+            // Staff_List
             // 
-            this.Delete_Staff.AutoSize = true;
-            this.Delete_Staff.Location = new System.Drawing.Point(316, 182);
-            this.Delete_Staff.Name = "Delete_Staff";
-            this.Delete_Staff.Size = new System.Drawing.Size(92, 19);
-            this.Delete_Staff.TabIndex = 13;
-            this.Delete_Staff.Text = "Delete Staff";
+            this.Staff_List.AutoSize = true;
+            this.Staff_List.Location = new System.Drawing.Point(31, 255);
+            this.Staff_List.Name = "Staff_List";
+            this.Staff_List.Size = new System.Drawing.Size(72, 19);
+            this.Staff_List.TabIndex = 9;
+            this.Staff_List.Text = "Staff List";
+            // 
+            // Add_staff
+            // 
+            this.Add_staff.AutoSize = true;
+            this.Add_staff.Location = new System.Drawing.Point(27, 111);
+            this.Add_staff.Name = "Add_staff";
+            this.Add_staff.Size = new System.Drawing.Size(76, 19);
+            this.Add_staff.TabIndex = 7;
+            this.Add_staff.Text = "Add Staff";
             // 
             // Student_List
             // 
@@ -137,12 +141,21 @@
             this.Student_List.Controls.Add(this.Lbl_AddStudent);
             this.Student_List.Controls.Add(this.Btn_AddStudent);
             this.Student_List.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Student_List.Location = new System.Drawing.Point(7, 347);
+            this.Student_List.Location = new System.Drawing.Point(243, 351);
             this.Student_List.Name = "Student_List";
             this.Student_List.Size = new System.Drawing.Size(450, 309);
             this.Student_List.TabIndex = 14;
             this.Student_List.TabStop = false;
             this.Student_List.Text = "Manage Student";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(243, 255);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 19);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Report";
             // 
             // label1
             // 
@@ -180,15 +193,6 @@
             this.Lbl_AddStudent.TabIndex = 7;
             this.Lbl_AddStudent.Text = "Add Student";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 255);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 19);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Report";
-            // 
             // Manage_Subject
             // 
             this.Manage_Subject.BackColor = System.Drawing.Color.LightSlateGray;
@@ -199,7 +203,7 @@
             this.Manage_Subject.Controls.Add(this.label8);
             this.Manage_Subject.Controls.Add(this.Btn_Add_Subject);
             this.Manage_Subject.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Manage_Subject.Location = new System.Drawing.Point(504, 34);
+            this.Manage_Subject.Location = new System.Drawing.Point(699, 36);
             this.Manage_Subject.Name = "Manage_Subject";
             this.Manage_Subject.Size = new System.Drawing.Size(450, 307);
             this.Manage_Subject.TabIndex = 14;
@@ -243,12 +247,21 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.Btn_AddClass);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(504, 349);
+            this.groupBox1.Location = new System.Drawing.Point(699, 351);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(450, 307);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manage Classes and School";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(156, 275);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 19);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Manage School";
             // 
             // label9
             // 
@@ -267,6 +280,17 @@
             this.label10.Size = new System.Drawing.Size(77, 19);
             this.label10.TabIndex = 7;
             this.label10.Text = "Add Class";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::Csharp_student_information_system.Properties.Resources.icons8_class_50;
+            this.button3.Location = new System.Drawing.Point(184, 202);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(61, 70);
+            this.button3.TabIndex = 13;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
             // Btn_UpdateClass
             // 
@@ -422,32 +446,46 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // pictureBox1
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::Csharp_student_information_system.Properties.Resources.icons8_class_50;
-            this.button3.Location = new System.Drawing.Point(184, 202);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 70);
-            this.button3.TabIndex = 13;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            this.pictureBox1.Image = global::Csharp_student_information_system.Properties.Resources._591523aa486442dfba8df4eeb8944fcb;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // label11
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(156, 275);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 19);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Manage School";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(21, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(197, 37);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "DASHBOARD";
+            // 
+            // Btn_Exit
+            // 
+            this.Btn_Exit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Btn_Exit.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Exit.Location = new System.Drawing.Point(22, 606);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.Size = new System.Drawing.Size(197, 49);
+            this.Btn_Exit.TabIndex = 19;
+            this.Btn_Exit.Text = "EXIT";
+            this.Btn_Exit.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1089, 668);
+            this.ClientSize = new System.Drawing.Size(1171, 668);
+            this.Controls.Add(this.Btn_Exit);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Manage_Subject);
             this.Controls.Add(this.Student_List);
@@ -464,7 +502,9 @@
             this.Manage_Subject.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -503,5 +543,8 @@
         internal System.Windows.Forms.Button Btn_AddClass;
         private System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button Btn_Exit;
     }
 }

@@ -55,7 +55,7 @@ namespace OMP_Epupil
         // button print
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
-            // get desktop path
+            // set desktop path
             String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\scores_list.xls";
 
             using (var writer = new StreamWriter(path))

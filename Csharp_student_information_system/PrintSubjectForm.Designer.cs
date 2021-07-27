@@ -54,19 +54,19 @@
             this.ButtonPrint.Name = "ButtonPrint";
             this.ButtonPrint.Size = new System.Drawing.Size(844, 53);
             this.ButtonPrint.TabIndex = 62;
-            this.ButtonPrint.Text = "Print To Text File";
+            this.ButtonPrint.Text = "Export To Text File";
             this.ButtonPrint.UseVisualStyleBackColor = false;
             this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
-            // PrintCoursesForm
+            // PrintSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(874, 412);
             this.Controls.Add(this.ButtonPrint);
             this.Controls.Add(this.DataGridView1);
-            this.Name = "PrintCoursesForm";
+            this.Name = "PrintSubjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PrintCoursesForm";
             this.Load += new System.EventHandler(this.PrintCoursesForm_Load);

@@ -63,6 +63,16 @@ namespace Csharp_student_information_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _591523aa486442dfba8df4eeb8944fcb {
+            get {
+                object obj = ResourceManager.GetObject("591523aa486442dfba8df4eeb8944fcb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_column_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-column-50", resourceCulture);

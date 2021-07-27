@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_From));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxUsername = new System.Windows.Forms.TextBox();
@@ -43,9 +42,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(82, 199);
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(213, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 28);
             this.label1.TabIndex = 0;
@@ -54,9 +54,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(82, 238);
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(213, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 28);
             this.label2.TabIndex = 1;
@@ -65,7 +66,7 @@
             // TextBoxUsername
             // 
             this.TextBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxUsername.Location = new System.Drawing.Point(280, 199);
+            this.TextBoxUsername.Location = new System.Drawing.Point(333, 138);
             this.TextBoxUsername.Name = "TextBoxUsername";
             this.TextBoxUsername.Size = new System.Drawing.Size(197, 29);
             this.TextBoxUsername.TabIndex = 2;
@@ -73,7 +74,7 @@
             // TextBoxPassword
             // 
             this.TextBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxPassword.Location = new System.Drawing.Point(280, 247);
+            this.TextBoxPassword.Location = new System.Drawing.Point(333, 198);
             this.TextBoxPassword.Name = "TextBoxPassword";
             this.TextBoxPassword.Size = new System.Drawing.Size(197, 29);
             this.TextBoxPassword.TabIndex = 3;
@@ -86,7 +87,7 @@
             this.button_LOGIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_LOGIN.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_LOGIN.ForeColor = System.Drawing.Color.White;
-            this.button_LOGIN.Location = new System.Drawing.Point(100, 298);
+            this.button_LOGIN.Location = new System.Drawing.Point(195, 289);
             this.button_LOGIN.Name = "button_LOGIN";
             this.button_LOGIN.Size = new System.Drawing.Size(155, 52);
             this.button_LOGIN.TabIndex = 4;
@@ -101,7 +102,7 @@
             this.button_CANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_CANCEL.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_CANCEL.ForeColor = System.Drawing.Color.White;
-            this.button_CANCEL.Location = new System.Drawing.Point(297, 298);
+            this.button_CANCEL.Location = new System.Drawing.Point(366, 289);
             this.button_CANCEL.Name = "button_CANCEL";
             this.button_CANCEL.Size = new System.Drawing.Size(155, 52);
             this.button_CANCEL.TabIndex = 5;
@@ -112,9 +113,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(183, 153);
+            this.label3.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label3.Location = new System.Drawing.Point(280, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 33);
             this.label3.TabIndex = 7;
@@ -123,10 +125,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(116, 38);
+            this.pictureBox1.Image = global::Csharp_student_information_system.Properties.Resources._591523aa486442dfba8df4eeb8944fcb;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 78);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(336, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 184);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -135,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(542, 380);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);

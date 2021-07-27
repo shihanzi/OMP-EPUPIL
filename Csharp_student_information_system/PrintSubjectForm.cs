@@ -30,7 +30,7 @@ namespace OMP_Epupil
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
             // get desktop path
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\courses_list.txt";
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\courses_list.xls";
 
             using (var writer = new StreamWriter(path))
             {

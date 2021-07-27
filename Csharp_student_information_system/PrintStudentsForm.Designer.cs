@@ -75,13 +75,13 @@
             this.ButtonGO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(38)))), ((int)(((byte)(19)))));
             this.ButtonGO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonGO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonGO.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonGO.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonGO.ForeColor = System.Drawing.Color.White;
             this.ButtonGO.Location = new System.Drawing.Point(767, 25);
             this.ButtonGO.Name = "ButtonGO";
             this.ButtonGO.Size = new System.Drawing.Size(207, 64);
             this.ButtonGO.TabIndex = 74;
-            this.ButtonGO.Text = "GO";
+            this.ButtonGO.Text = "Search";
             this.ButtonGO.UseVisualStyleBackColor = false;
             this.ButtonGO.Click += new System.EventHandler(this.ButtonGO_Click);
             // 
@@ -103,21 +103,21 @@
             // DateTimePicker2
             // 
             this.DateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            this.DateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimePicker2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePicker2.Location = new System.Drawing.Point(319, 52);
             this.DateTimePicker2.Name = "DateTimePicker2";
-            this.DateTimePicker2.Size = new System.Drawing.Size(103, 26);
+            this.DateTimePicker2.Size = new System.Drawing.Size(103, 28);
             this.DateTimePicker2.TabIndex = 51;
             // 
             // radioButtonYES
             // 
             this.radioButtonYES.AutoSize = true;
-            this.radioButtonYES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonYES.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonYES.ForeColor = System.Drawing.Color.White;
             this.radioButtonYES.Location = new System.Drawing.Point(160, 13);
             this.radioButtonYES.Name = "radioButtonYES";
-            this.radioButtonYES.Size = new System.Drawing.Size(63, 24);
+            this.radioButtonYES.Size = new System.Drawing.Size(56, 25);
             this.radioButtonYES.TabIndex = 73;
             this.radioButtonYES.Text = "YES";
             this.radioButtonYES.UseVisualStyleBackColor = true;
@@ -126,23 +126,23 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(277, 55);
+            this.label1.Location = new System.Drawing.Point(281, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.Size = new System.Drawing.Size(33, 21);
             this.label1.TabIndex = 69;
-            this.label1.Text = "And";
+            this.label1.Text = "To ";
             // 
             // radioButtonNO
             // 
             this.radioButtonNO.AutoSize = true;
             this.radioButtonNO.Checked = true;
-            this.radioButtonNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNO.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonNO.ForeColor = System.Drawing.Color.White;
             this.radioButtonNO.Location = new System.Drawing.Point(228, 13);
             this.radioButtonNO.Name = "radioButtonNO";
-            this.radioButtonNO.Size = new System.Drawing.Size(52, 24);
+            this.radioButtonNO.Size = new System.Drawing.Size(53, 25);
             this.radioButtonNO.TabIndex = 72;
             this.radioButtonNO.TabStop = true;
             this.radioButtonNO.Text = "NO";
@@ -152,32 +152,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(7, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 20);
+            this.label2.Size = new System.Drawing.Size(134, 21);
             this.label2.TabIndex = 71;
             this.label2.Text = "Use Date Range:";
             // 
             // DateTimePicker1
             // 
             this.DateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimePicker1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DateTimePicker1.Location = new System.Drawing.Point(173, 52);
             this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(103, 26);
+            this.DateTimePicker1.Size = new System.Drawing.Size(103, 28);
             this.DateTimePicker1.TabIndex = 50;
             // 
             // Label10
             // 
             this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.ForeColor = System.Drawing.Color.White;
             this.Label10.Location = new System.Drawing.Point(7, 54);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(166, 20);
+            this.Label10.Size = new System.Drawing.Size(157, 21);
             this.Label10.TabIndex = 68;
             this.Label10.Text = "BirthDate Between:";
             // 
@@ -185,11 +185,11 @@
             // 
             this.RadioButtonAll.AutoSize = true;
             this.RadioButtonAll.Checked = true;
-            this.RadioButtonAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonAll.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonAll.ForeColor = System.Drawing.Color.White;
             this.RadioButtonAll.Location = new System.Drawing.Point(19, 47);
             this.RadioButtonAll.Name = "RadioButtonAll";
-            this.RadioButtonAll.Size = new System.Drawing.Size(47, 24);
+            this.RadioButtonAll.Size = new System.Drawing.Size(49, 25);
             this.RadioButtonAll.TabIndex = 2;
             this.RadioButtonAll.TabStop = true;
             this.RadioButtonAll.Text = "All";
@@ -198,11 +198,11 @@
             // RadioButtonFemale
             // 
             this.RadioButtonFemale.AutoSize = true;
-            this.RadioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonFemale.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonFemale.ForeColor = System.Drawing.Color.White;
             this.RadioButtonFemale.Location = new System.Drawing.Point(156, 47);
             this.RadioButtonFemale.Name = "RadioButtonFemale";
-            this.RadioButtonFemale.Size = new System.Drawing.Size(86, 24);
+            this.RadioButtonFemale.Size = new System.Drawing.Size(83, 25);
             this.RadioButtonFemale.TabIndex = 1;
             this.RadioButtonFemale.Text = "Female";
             this.RadioButtonFemale.UseVisualStyleBackColor = true;
@@ -210,11 +210,11 @@
             // RadioButtonMale
             // 
             this.RadioButtonMale.AutoSize = true;
-            this.RadioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadioButtonMale.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioButtonMale.ForeColor = System.Drawing.Color.White;
             this.RadioButtonMale.Location = new System.Drawing.Point(78, 47);
             this.RadioButtonMale.Name = "RadioButtonMale";
-            this.RadioButtonMale.Size = new System.Drawing.Size(65, 24);
+            this.RadioButtonMale.Size = new System.Drawing.Size(66, 25);
             this.RadioButtonMale.TabIndex = 0;
             this.RadioButtonMale.Text = "Male";
             this.RadioButtonMale.UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@
             this.ButtonPrint.Name = "ButtonPrint";
             this.ButtonPrint.Size = new System.Drawing.Size(990, 53);
             this.ButtonPrint.TabIndex = 61;
-            this.ButtonPrint.Text = "Print To Text File";
+            this.ButtonPrint.Text = "Export To Text File";
             this.ButtonPrint.UseVisualStyleBackColor = false;
             this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1034, 575);
             this.Controls.Add(this.ButtonPrint);
             this.Controls.Add(this.GroupBox1);

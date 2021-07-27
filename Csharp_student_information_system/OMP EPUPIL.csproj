@@ -388,6 +388,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\user.png" />
+    <None Include="Resources\591523aa486442dfba8df4eeb8944fcb.png" />
     <None Include="Resources\icons8-class-50.png" />
     <None Include="Resources\icons8-delete-bin-24.png" />
     <None Include="Resources\icons8-edit-24.png" />

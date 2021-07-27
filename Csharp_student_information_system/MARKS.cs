@@ -127,14 +127,10 @@ namespace OMP_Epupil
            SqlCommand command = new SqlCommand();
            
            command.Connection = mydb.getConnection;
-           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
-           
-           SqlDataAdapter adapter = new SqlDataAdapter(command);
-           
+           command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");         
+           SqlDataAdapter adapter = new SqlDataAdapter(command);    
            DataTable table = new DataTable();
-           
            adapter.Fill(table);
-           
            return table;
        }
 
@@ -143,13 +139,10 @@ namespace OMP_Epupil
         public bool deleteMarks(int studentID, int courseID)
         {
             SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
-            
             command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
-            
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;      
             mydb.openConnection();
-            
-            if ( command.ExecuteNonQuery() == 1 )
+            if (command.ExecuteNonQuery() == 1)
             {
                 return true;
             }
