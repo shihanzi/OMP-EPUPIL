@@ -18,7 +18,6 @@ namespace OMP_Epupil
 
             SqlCommand command = new SqlCommand("INSERT INTO [dbo].[OMPClass] ([Class],[Section],[Description]) VALUES (@Class,@Section,@description)", mydb.getConnection);
 
-            
             command.Parameters.Add("@Class", SqlDbType.VarChar).Value = ompclass;
             command.Parameters.Add("@Section", SqlDbType.VarChar).Value = section;
             command.Parameters.Add("@description", SqlDbType.VarChar).Value = description;
@@ -33,7 +32,6 @@ namespace OMP_Epupil
             {
                 return false;
             }
-
         }
 
         //  function to update a class data
@@ -126,7 +124,7 @@ namespace OMP_Epupil
         }
 
 
-        //  function to return a subject by id
+        //  function to return a class by id
         public DataTable getClassById(SqlCommand command)
         {
 

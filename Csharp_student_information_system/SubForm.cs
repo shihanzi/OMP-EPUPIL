@@ -16,5 +16,11 @@ namespace OMP_Epupil
         {
             InitializeComponent();
         }
+
+        private void Btn_MapSubjectToClass_Click(object sender, EventArgs e)
+        {
+            AddSubjectToClass AddSubTCls = new AddSubjectToClass();
+            AddSubTCls.Show();
+        }
     }
 }

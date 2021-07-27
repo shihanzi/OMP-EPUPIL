@@ -96,6 +96,12 @@
     <Compile Include="AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapSubjectToClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapSubjectToClass.Designer.cs">
+      <DependentUpon>MapSubjectToClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="avgMarksBySubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SUBTOCLASS.cs" />
     <Compile Include="UpdateDeleteSchoolForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapSubjectToClass.resx">
+      <DependentUpon>MapSubjectToClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="avgMarksBySubjectForm.resx">
       <DependentUpon>avgMarksBySubjectForm.cs</DependentUpon>

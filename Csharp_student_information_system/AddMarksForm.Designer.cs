@@ -165,7 +165,7 @@
             this.Controls.Add(this.Label3);
             this.Name = "AddScoreForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddScoreForm";
+            this.Text = "AddMarksForm";
             this.Load += new System.EventHandler(this.AddScoreForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewStudents)).EndInit();
             this.ResumeLayout(false);

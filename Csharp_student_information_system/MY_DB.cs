@@ -28,7 +28,7 @@ namespace OMP_Epupil
         // open the connection
        public void openConnection()
         {
-            if ((con.State == ConnectionState.Closed))
+            if (con.State == ConnectionState.Closed)
             {
                 con.Open();
             }
@@ -39,7 +39,7 @@ namespace OMP_Epupil
         // close the connection
        public void closeConnection()
         {
-            if ((con.State == ConnectionState.Open))
+            if (con.State == ConnectionState.Open)
             {
                 con.Close();
             }

@@ -29,11 +29,11 @@ namespace OMP_Epupil
         // create a method to populate the listbox with courses name and id
         void reloadListBoxData()
         {
-            ListBoxCourses.DataSource = subject.getAllCourses();
-            ListBoxCourses.ValueMember = "id";
-            ListBoxCourses.DisplayMember = "label";
+            ListBoxSubjects.DataSource = subject.getAllCourses();
+            ListBoxSubjects.ValueMember = "id";
+            ListBoxSubjects.DisplayMember = "label";
 
-            ListBoxCourses.SelectedItem = null;
+            ListBoxSubjects.SelectedItem = null;
 
             // display the total Subjects number
             LabelTotalCourses.Text = ("Total Subjects: " + subject.totalSubjects());
@@ -44,7 +44,7 @@ namespace OMP_Epupil
         {
             DataRow dr = subject.getAllCourses().Rows[index];
 
-            ListBoxCourses.SelectedIndex = index;
+            ListBoxSubjects.SelectedIndex = index;
 
             TextBoxID.Text = dr.ItemArray[0].ToString();
 
@@ -59,8 +59,8 @@ namespace OMP_Epupil
         // listbox click -> display the selected subject data
         private void ListBoxCourses_Click(object sender, EventArgs e)
         {
-            DataRowView drv = (DataRowView)ListBoxCourses.SelectedItem;
-            pos = ListBoxCourses.SelectedIndex;
+            DataRowView drv = (DataRowView)ListBoxSubjects.SelectedItem;
+            pos = ListBoxSubjects.SelectedIndex;
             showData(pos);
         }
 

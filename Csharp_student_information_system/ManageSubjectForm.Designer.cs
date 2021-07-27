@@ -35,7 +35,7 @@
             this.ButtonFirst = new System.Windows.Forms.Button();
             this.ButtonRemove = new System.Windows.Forms.Button();
             this.ButtonEdit = new System.Windows.Forms.Button();
-            this.ListBoxCourses = new System.Windows.Forms.ListBox();
+            this.ListBoxSubjects = new System.Windows.Forms.ListBox();
             this.TextBoxID = new System.Windows.Forms.TextBox();
             this.Label4 = new System.Windows.Forms.Label();
             this.ButtonAddCourse = new System.Windows.Forms.Button();
@@ -155,16 +155,16 @@
             this.ButtonEdit.UseVisualStyleBackColor = false;
             this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
-            // ListBoxCourses
+            // ListBoxSubjects
             // 
-            this.ListBoxCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListBoxCourses.FormattingEnabled = true;
-            this.ListBoxCourses.ItemHeight = 25;
-            this.ListBoxCourses.Location = new System.Drawing.Point(486, 24);
-            this.ListBoxCourses.Name = "ListBoxCourses";
-            this.ListBoxCourses.Size = new System.Drawing.Size(327, 354);
-            this.ListBoxCourses.TabIndex = 50;
-            this.ListBoxCourses.Click += new System.EventHandler(this.ListBoxCourses_Click);
+            this.ListBoxSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListBoxSubjects.FormattingEnabled = true;
+            this.ListBoxSubjects.ItemHeight = 25;
+            this.ListBoxSubjects.Location = new System.Drawing.Point(486, 24);
+            this.ListBoxSubjects.Name = "ListBoxSubjects";
+            this.ListBoxSubjects.Size = new System.Drawing.Size(327, 354);
+            this.ListBoxSubjects.TabIndex = 50;
+            this.ListBoxSubjects.Click += new System.EventHandler(this.ListBoxCourses_Click);
             // 
             // TextBoxID
             // 
@@ -268,7 +268,7 @@
             this.Label1.TabIndex = 41;
             this.Label1.Text = "Label:";
             // 
-            // ManageCoursesForm
+            // ManageSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +281,7 @@
             this.Controls.Add(this.ButtonFirst);
             this.Controls.Add(this.ButtonRemove);
             this.Controls.Add(this.ButtonEdit);
-            this.Controls.Add(this.ListBoxCourses);
+            this.Controls.Add(this.ListBoxSubjects);
             this.Controls.Add(this.TextBoxID);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.ButtonAddCourse);
@@ -291,7 +291,7 @@
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.TextBoxCourseName);
             this.Controls.Add(this.Label1);
-            this.Name = "ManageCoursesForm";
+            this.Name = "ManageSubjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageCoursesForm";
             this.Load += new System.EventHandler(this.ManageCoursesForm_Load);
@@ -310,7 +310,7 @@
         internal System.Windows.Forms.Button ButtonFirst;
         internal System.Windows.Forms.Button ButtonRemove;
         internal System.Windows.Forms.Button ButtonEdit;
-        internal System.Windows.Forms.ListBox ListBoxCourses;
+        internal System.Windows.Forms.ListBox ListBoxSubjects;
         internal System.Windows.Forms.TextBox TextBoxID;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.Button ButtonAddCourse;
