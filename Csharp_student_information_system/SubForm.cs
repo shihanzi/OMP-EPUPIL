@@ -28,5 +28,36 @@ namespace OMP_Epupil
             MapStudentToClass AddStuTCls = new MapStudentToClass();
             AddStuTCls.Show();
         }
+
+        private void Add_Marks_Click(object sender, EventArgs e)
+        {
+            RemoveMarksForm RemoveSF = new RemoveMarksForm();
+            RemoveSF.Show(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddScoreForm AddSF = new AddScoreForm();
+            AddSF.Show(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrintScoresForm PrintSCF = new PrintScoresForm();
+            PrintSCF.Show(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ManageMarksForm ManageSF = new ManageMarksForm();
+            ManageSF.Show(this);
+        }
+
+        private void SubForm_Load(object sender, EventArgs e)
+        {
+            MARKS score = new MARKS();
+            DataGridViewAvgScore.DataSource = score.getAvgMarksBySubject();
+            DGVMarksList.DataSource = score.getStudentsMarks();
+        }
     }
 }

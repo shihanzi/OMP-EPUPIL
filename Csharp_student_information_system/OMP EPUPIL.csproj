@@ -312,6 +312,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RemoveClassForm.resx">
       <DependentUpon>RemoveClassForm.cs</DependentUpon>
@@ -387,6 +388,11 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\user.png" />
+    <None Include="Resources\icons8-business-report-48.png" />
+    <None Include="Resources\icons8-scorecard-483.png" />
+    <None Include="Resources\icons8-scorecard-482.png" />
+    <None Include="Resources\icons8-scorecard-481.png" />
+    <None Include="Resources\icons8-scorecard-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
