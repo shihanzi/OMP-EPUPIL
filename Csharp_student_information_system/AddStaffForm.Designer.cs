@@ -258,12 +258,12 @@ namespace OMP_Epupil
             // 
             // ButtonAddStaff
             // 
-            this.ButtonAddStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+            this.ButtonAddStaff.BackColor = System.Drawing.Color.Lime;
             this.ButtonAddStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonAddStaff.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.ButtonAddStaff.ForeColor = System.Drawing.Color.White;
-            this.ButtonAddStaff.Location = new System.Drawing.Point(222, 550);
+            this.ButtonAddStaff.Location = new System.Drawing.Point(39, 556);
             this.ButtonAddStaff.Name = "ButtonAddStaff";
             this.ButtonAddStaff.Size = new System.Drawing.Size(160, 40);
             this.ButtonAddStaff.TabIndex = 34;
@@ -278,7 +278,7 @@ namespace OMP_Epupil
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCancel.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.ButtonCancel.ForeColor = System.Drawing.Color.White;
-            this.ButtonCancel.Location = new System.Drawing.Point(39, 550);
+            this.ButtonCancel.Location = new System.Drawing.Point(222, 556);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(160, 40);
             this.ButtonCancel.TabIndex = 35;

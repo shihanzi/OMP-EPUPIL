@@ -96,6 +96,12 @@
     <Compile Include="AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapStudentToClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapStudentToClass.Designer.cs">
+      <DependentUpon>MapStudentToClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="MapSubjectToClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Student_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="STUDTOCLASS.cs" />
     <Compile Include="SUBTOCLASS.cs" />
     <Compile Include="UpdateDeleteSchoolForm.cs">
       <SubType>Form</SubType>
@@ -257,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapStudentToClass.resx">
+      <DependentUpon>MapStudentToClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapSubjectToClass.resx">
       <DependentUpon>MapSubjectToClass.cs</DependentUpon>

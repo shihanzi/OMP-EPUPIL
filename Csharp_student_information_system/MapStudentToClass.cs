@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace OMP_Epupil
 {
-    public partial class SubForm : Form
+    public partial class MapStudentToClass : Form
     {
-        public SubForm()
+        public MapStudentToClass()
         {
             InitializeComponent();
         }
 
-        private void Btn_MapSubjectToClass_Click(object sender, EventArgs e)
-        {
-            AddSubjectToClass AddSubTCls = new AddSubjectToClass();
-            AddSubTCls.Show();
-        }
-
         private void Btn_MapStudent_Click(object sender, EventArgs e)
         {
-            MapStudentToClass AddStuTCls = new MapStudentToClass();
-            AddStuTCls.Show();
+
         }
     }
 }

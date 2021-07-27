@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace OMP_Epupil
 {
-    class SUBTOCLASS
+    class STUDTOCLASS
     {
 
 
@@ -17,15 +17,14 @@ namespace OMP_Epupil
 
 
         //  function to insert a new Sub to a class.
-        public bool insertSubToClass(int classID, string section, int subjectId)
+        public bool insertStudToClass(int Id, int studenttId)
         {
             try
             {
-                using (var command = new SqlCommand("INSERT INTO SubToClass (ClassId, section, SubjectId) VALUES (@ClassId, @section, @SubjectId)"))
+                using (var command = new SqlCommand("INSERT INTO StudToClass (Id, SubjectId) VALUES (@Id,@studenttId)"))
                 {
-                    command.Parameters.Add("@ClassID", SqlDbType.Int).Value = classID;
-                    command.Parameters.Add("@Section", SqlDbType.VarChar).Value = section;
-                    command.Parameters.Add("@SubjectId", SqlDbType.Int).Value = subjectId;
+                    command.Parameters.Add("@ClassID", SqlDbType.Int).Value = Id;
+                    command.Parameters.Add("@studenttId", SqlDbType.Int).Value = studenttId;
                     command.Connection = mydb.getConnection;
 
                     mydb.openConnection();
@@ -49,32 +48,31 @@ namespace OMP_Epupil
 
 
         // function to check if a class is already asigned to this subject
-        public bool subToClassExist(int classId,string section,int SubjectId)
+        public bool subToStudentExist(int Id, int studenttId)
         {
 
-           
-                SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[SubToClass] WHERE [ClassId] = @ClassID AND [Section] = @section AND [SubjectId] = @SubjectId", mydb.getConnection);
 
-                command.Parameters.Add("@ClassID", SqlDbType.Int).Value = classId;
-                command.Parameters.Add("@section", SqlDbType.VarChar).Value = section;
-                command.Parameters.Add("@subjectId", SqlDbType.Int).Value = SubjectId;
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[StudToClass] WHERE [Id] = @iD AND [studenttId] = @studenttId", mydb.getConnection);
 
-                
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable table = new DataTable();
+            command.Parameters.Add("@Id", SqlDbType.Int).Value = Id;
+            command.Parameters.Add("@studenttId", SqlDbType.Int).Value = studenttId;
 
-                adapter.Fill(table);
 
-                if ((table.Rows.Count == 0))
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+
+            adapter.Fill(table);
+
+            if ((table.Rows.Count == 0))
+            {
+                return false;
             }
-           
+            else
+            {
+                return true;
+            }
+        }
+
 
 
         // method to get the average marks by subject

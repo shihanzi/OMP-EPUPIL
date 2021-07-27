@@ -46,14 +46,14 @@ namespace OMP_Epupil
             {
                 int classID = Convert.ToInt32(TextBoxClassID.Text);
                 string section = TextBoxSection.Text;
-                string subject = ComboBoxSubjects.SelectedItem.ToString();
+                int subjectId = Convert.ToInt32(ComboBoxSubjects.SelectedValue);
 
 
 
                 // check if the class is already set for this subject 
-                if (!subtoclass.subToClassExist(classID,section,subject))
+                if (!subtoclass.subToClassExist(classID,section,subjectId))
                 
-                    if (subtoclass.insertSubToClass(classID,section,subject))
+                    if (subtoclass.insertSubToClass(classID,section,subjectId))
                     {
                         MessageBox.Show("Subject Mapped", "Map", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
