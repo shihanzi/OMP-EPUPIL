@@ -61,8 +61,8 @@ namespace OMP_Epupil
             if ( data == "student" )
             {
                 TextBoxStudentID.Text = DataGridViewStudentsScore.CurrentRow.Cells[0].Value.ToString();
-                //  if the user select to show student score data
-                //  then when he click a datagridview 
+                //  if the user select to show student marks data
+                //  then when we click a datagridview 
                 //  it will show the student id in the textbox & the course in the combobox
             }
             else if ( data == "score" )
@@ -104,23 +104,23 @@ namespace OMP_Epupil
                 {
                     if (score.insertMarks(studentID, courseID, scoreValue, description))
                     {
-                        MessageBox.Show("Student Score Inserted", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Student Marks Inserted", "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Student Score Not Inserted", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Student Marks Not Inserted", "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("The Score For This Course Are Already Set", "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The Marks For This Subjects is Already Set", "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Add Score", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Add Marks", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -133,16 +133,16 @@ namespace OMP_Epupil
             int studentID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[0].Value.ToString());
             int courseID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[3].Value.ToString());
 
-            if (MessageBox.Show("Do Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do You Want To Delete This Marks?", "Delete Marks", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (score.deleteMarks(studentID, courseID))
                 {
-                    MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Marks Deleted", "Delete Marks", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
                 }
                 else
                 {
-                    MessageBox.Show("Score Not Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Marks Not Deleted", "Delete Marks", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }

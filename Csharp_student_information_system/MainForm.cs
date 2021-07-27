@@ -171,5 +171,95 @@ namespace OMP_Epupil
             AddClassForm AddClsFrm = new AddClassForm();
             AddClsFrm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStaffF = new AddStaffForm();
+            addStaffF.Show();
+        }
+
+        private void Btn_StaffList_Click(object sender, EventArgs e)
+        {
+            staffListForm StaffListF = new staffListForm();
+            StaffListF.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            updateDeleteStaffForm StaffUpdateDlt = new updateDeleteStaffForm();
+            StaffUpdateDlt.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ManageStaffForm StaffManageFrm = new ManageStaffForm();
+            StaffManageFrm.Show();
+        }
+
+        private void Btn_AddStudent_Click(object sender, EventArgs e)
+        {
+            AddStudentForm addStdF = new AddStudentForm();
+            addStdF.Show();
+        }
+
+        private void btn_StudentList_Click(object sender, EventArgs e)
+        {
+            studentsListForm StdListF = new studentsListForm();
+            StdListF.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            StaticsForm StdSF = new StaticsForm();
+            StdSF.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ManageStudentsForm StdManageF = new ManageStudentsForm();
+            StdManageF.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            PrintStudentsForm PrintSF = new PrintStudentsForm();
+            PrintSF.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AddSubjectForm AddCF = new AddSubjectForm();
+            AddCF.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            EditSubjectForm EditCF = new EditSubjectForm();
+            EditCF.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ManageSubjectForm ManageCF = new ManageSubjectForm();
+            ManageCF.Show();
+        }
+
+        private void Btn_AddClass_Click(object sender, EventArgs e)
+        {
+            AddClassForm AddClsFrm = new AddClassForm();
+            AddClsFrm.Show();
+        }
+
+        private void Btn_UpdateClass_Click(object sender, EventArgs e)
+        {
+            UpdateRemoveClassForm updlclass = new UpdateRemoveClassForm();
+            updlclass.Show();
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            UpdateDeleteSchoolForm AdSch = new UpdateDeleteSchoolForm();
+            AdSch.Show();
+        }
     }
 }

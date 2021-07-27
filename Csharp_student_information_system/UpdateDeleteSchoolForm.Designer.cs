@@ -55,66 +55,66 @@ namespace OMP_Epupil
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(282, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(419, 47);
+            this.label1.Size = new System.Drawing.Size(424, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "SCHOOL INFORMATION";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft New Tai Lue", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(24, 108);
+            this.label2.Location = new System.Drawing.Point(24, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 37);
+            this.label2.Size = new System.Drawing.Size(209, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "SCHOOL NAME";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(24, 250);
+            this.label3.Location = new System.Drawing.Point(24, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 37);
+            this.label3.Size = new System.Drawing.Size(108, 35);
             this.label3.TabIndex = 2;
             this.label3.Text = "PHONE";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft New Tai Lue", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(24, 158);
+            this.label4.Location = new System.Drawing.Point(24, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 37);
+            this.label4.Size = new System.Drawing.Size(136, 35);
             this.label4.TabIndex = 3;
             this.label4.Text = "ADDRESS";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(24, 293);
+            this.label5.Location = new System.Drawing.Point(24, 297);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 37);
+            this.label5.Size = new System.Drawing.Size(73, 35);
             this.label5.TabIndex = 4;
             this.label5.Text = "WEB";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft New Tai Lue", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(24, 344);
+            this.label6.Location = new System.Drawing.Point(24, 348);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 37);
+            this.label6.Size = new System.Drawing.Size(108, 35);
             this.label6.TabIndex = 5;
             this.label6.Text = "E-MAIL";
             // 

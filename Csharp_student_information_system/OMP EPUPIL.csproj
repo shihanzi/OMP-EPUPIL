@@ -388,6 +388,21 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\user.png" />
+    <None Include="Resources\icons8-class-50.png" />
+    <None Include="Resources\icons8-delete-bin-24.png" />
+    <None Include="Resources\icons8-edit-24.png" />
+    <None Include="Resources\icons8-edit1.gif" />
+    <None Include="Resources\icons8-edit.gif" />
+    <None Include="Resources\icons8-add-column-50.png" />
+    <None Include="Resources\icons8-business-report-30 %281%29.png" />
+    <None Include="Resources\icons8-delete-document-24.png" />
+    <None Include="Resources\icons8-edit-file-24.png" />
+    <None Include="Resources\icons8-identification-documents-30.png" />
+    <None Include="Resources\icons8-student-registration-50.png" />
+    <None Include="Resources\icons8-delete-user-male-50.png" />
+    <None Include="Resources\icons8-edit-profile-30.png" />
+    <None Include="Resources\icons8-staff-50.png" />
+    <None Include="Resources\icons8-staff-48.png" />
     <None Include="Resources\icons8-business-report-48.png" />
     <None Include="Resources\icons8-scorecard-483.png" />
     <None Include="Resources\icons8-scorecard-482.png" />
