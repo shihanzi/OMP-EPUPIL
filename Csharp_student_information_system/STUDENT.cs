@@ -52,8 +52,19 @@ namespace OMP_Epupil
             return table;
         }
 
-        // function to delete student by id
-        public bool deleteStudent(int id)
+         // function to get all students from database
+        public DataTable getAllStudents()
+        {
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Students", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+            // function to delete student by id
+            public bool deleteStudent(int id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Students] WHERE [id] = @Id", mydb.getConnection);
             command.Parameters.Add("@Id", SqlDbType.Int).Value = id;

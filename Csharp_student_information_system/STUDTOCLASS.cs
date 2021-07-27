@@ -17,14 +17,16 @@ namespace OMP_Epupil
 
 
         //  function to insert a new Sub to a class.
-        public bool insertStudToClass(int Id, int studenttId)
+        public bool insertStudToClass(int studenttId, int classID, string section)
         {
             try
             {
-                using (var command = new SqlCommand("INSERT INTO StudToClass (Id, SubjectId) VALUES (@Id,@studenttId)"))
+                using (var command = new SqlCommand("INSERT INTO StudToClass (studentId,classID,section) VALUES (@studentId,@classID,@section)"))
                 {
-                    command.Parameters.Add("@ClassID", SqlDbType.Int).Value = Id;
-                    command.Parameters.Add("@studenttId", SqlDbType.Int).Value = studenttId;
+                    
+                    command.Parameters.Add("@studentId", SqlDbType.Int).Value = studenttId;
+                    command.Parameters.Add("@classID", SqlDbType.Int).Value = classID;
+                    command.Parameters.Add("@section", SqlDbType.VarChar).Value = section;
                     command.Connection = mydb.getConnection;
 
                     mydb.openConnection();
@@ -48,14 +50,16 @@ namespace OMP_Epupil
 
 
         // function to check if a class is already asigned to this subject
-        public bool subToStudentExist(int Id, int studenttId)
+        public bool subToStudentExist(int studenttId,int classID,string section)
         {
 
 
-            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[StudToClass] WHERE [Id] = @iD AND [studenttId] = @studenttId", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[StudToClass] WHERE [studentId] = @studentId AND [classID] = @classID AND [section] = @section", mydb.getConnection);
 
-            command.Parameters.Add("@Id", SqlDbType.Int).Value = Id;
-            command.Parameters.Add("@studenttId", SqlDbType.Int).Value = studenttId;
+            
+            command.Parameters.Add("@studentId", SqlDbType.Int).Value = studenttId;
+            command.Parameters.Add("@classID", SqlDbType.Int).Value = classID;
+            command.Parameters.Add("@section", SqlDbType.VarChar).Value = section;
 
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -94,7 +98,7 @@ namespace OMP_Epupil
         }
 
 
-        // method to get subject
+        // method to get student marks
         public DataTable getStudentsMarks()
         {
             SqlCommand command = new SqlCommand();
@@ -113,7 +117,7 @@ namespace OMP_Epupil
         }
 
 
-        // get course scores
+        // get subject marks
         public DataTable getSubjectMarks(int subjectId)
         {
             SqlCommand command = new SqlCommand();
@@ -138,6 +142,21 @@ namespace OMP_Epupil
 
             command.Connection = mydb.getConnection;
             command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            DataTable table = new DataTable();
+
+            adapter.Fill(table);
+
+            return table;
+        }
+
+        //  function to get all courses from the database
+        public DataTable getStudents()
+        {
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Students", mydb.getConnection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
