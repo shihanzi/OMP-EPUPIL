@@ -103,7 +103,7 @@ namespace OMP_Epupil
         }
 
 
-        // get course scores
+        // method get course marks
        public DataTable getSubjectMarks(int subjectId)
        {
            SqlCommand command = new SqlCommand();

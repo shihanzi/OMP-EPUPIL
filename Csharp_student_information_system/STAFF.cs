@@ -116,7 +116,7 @@ namespace OMP_Epupil
             }
 
             //  function to return the total staffs in the database
-            public string totalStudent()
+            public string totalStaff()
             {
                 return execCount("SELECT COUNT(*) FROM [dbo].[Staffs]");
             }

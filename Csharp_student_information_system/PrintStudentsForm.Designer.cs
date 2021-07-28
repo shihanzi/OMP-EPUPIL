@@ -224,11 +224,11 @@
             this.ButtonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
             this.ButtonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonPrint.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonPrint.ForeColor = System.Drawing.Color.White;
-            this.ButtonPrint.Location = new System.Drawing.Point(21, 506);
+            this.ButtonPrint.Location = new System.Drawing.Point(788, 506);
             this.ButtonPrint.Name = "ButtonPrint";
-            this.ButtonPrint.Size = new System.Drawing.Size(990, 53);
+            this.ButtonPrint.Size = new System.Drawing.Size(223, 53);
             this.ButtonPrint.TabIndex = 61;
             this.ButtonPrint.Text = "Export To Text File";
             this.ButtonPrint.UseVisualStyleBackColor = false;

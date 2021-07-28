@@ -24,7 +24,7 @@ namespace OMP_Epupil
             return table;
         }
 
-        // function to check if a score is already asigned to this student on this course
+        // function to check if a school is inserted or not?
         public bool updateSchool(int id,string scn, string scadd, string scphone, string scweb, string scemail)
         {
             SqlCommand command = new SqlCommand("UPDATE [dbo].[School] SET [Schoolname]=@scn,[Address]=@scadd,[Phone]=@scphone,[Web]=@scweb,[Email]=@scemail WHERE id=@id", mydb.getConnection);
