@@ -52,19 +52,20 @@
             // 
             this.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView1.Location = new System.Drawing.Point(21, 130);
+            this.DataGridView1.Location = new System.Drawing.Point(20, 12);
             this.DataGridView1.Name = "DataGridView1";
-            this.DataGridView1.Size = new System.Drawing.Size(990, 363);
+            this.DataGridView1.Size = new System.Drawing.Size(990, 408);
             this.DataGridView1.TabIndex = 44;
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.ButtonPrint);
             this.GroupBox1.Controls.Add(this.ButtonGO);
             this.GroupBox1.Controls.Add(this.groupBox2);
             this.GroupBox1.Controls.Add(this.RadioButtonAll);
             this.GroupBox1.Controls.Add(this.RadioButtonFemale);
             this.GroupBox1.Controls.Add(this.RadioButtonMale);
-            this.GroupBox1.Location = new System.Drawing.Point(21, 8);
+            this.GroupBox1.Location = new System.Drawing.Point(32, 432);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(990, 112);
             this.GroupBox1.TabIndex = 58;
@@ -77,9 +78,9 @@
             this.ButtonGO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonGO.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonGO.ForeColor = System.Drawing.Color.White;
-            this.ButtonGO.Location = new System.Drawing.Point(767, 25);
+            this.ButtonGO.Location = new System.Drawing.Point(857, 25);
             this.ButtonGO.Name = "ButtonGO";
-            this.ButtonGO.Size = new System.Drawing.Size(207, 64);
+            this.ButtonGO.Size = new System.Drawing.Size(117, 64);
             this.ButtonGO.TabIndex = 74;
             this.ButtonGO.Text = "Search";
             this.ButtonGO.UseVisualStyleBackColor = false;
@@ -226,9 +227,9 @@
             this.ButtonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPrint.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonPrint.ForeColor = System.Drawing.Color.White;
-            this.ButtonPrint.Location = new System.Drawing.Point(788, 506);
+            this.ButtonPrint.Location = new System.Drawing.Point(728, 25);
             this.ButtonPrint.Name = "ButtonPrint";
-            this.ButtonPrint.Size = new System.Drawing.Size(223, 53);
+            this.ButtonPrint.Size = new System.Drawing.Size(123, 65);
             this.ButtonPrint.TabIndex = 61;
             this.ButtonPrint.Text = "Export To Text File";
             this.ButtonPrint.UseVisualStyleBackColor = false;
@@ -239,8 +240,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1034, 575);
-            this.Controls.Add(this.ButtonPrint);
+            this.ClientSize = new System.Drawing.Size(1034, 557);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.DataGridView1);
             this.Name = "PrintStudentsForm";

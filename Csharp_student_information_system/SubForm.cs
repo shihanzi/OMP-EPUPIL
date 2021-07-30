@@ -59,5 +59,11 @@ namespace OMP_Epupil
             DataGridViewAvgScore.DataSource = score.getAvgMarksBySubject();
             DGVMarksList.DataSource = score.getStudentsMarks();
         }
+
+        private void Btn_StudentReport_Click(object sender, EventArgs e)
+        {
+            PrintStudentsForm PrintSF = new PrintStudentsForm();
+            PrintSF.Show();
+        }
     }
 }

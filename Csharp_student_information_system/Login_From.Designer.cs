@@ -43,11 +43,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
             this.label1.Location = new System.Drawing.Point(213, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 28);
+            this.label1.Size = new System.Drawing.Size(122, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
@@ -55,11 +55,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
             this.label2.Location = new System.Drawing.Point(213, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 28);
+            this.label2.Size = new System.Drawing.Size(115, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
@@ -79,6 +79,7 @@
             this.TextBoxPassword.Size = new System.Drawing.Size(197, 29);
             this.TextBoxPassword.TabIndex = 3;
             this.TextBoxPassword.UseSystemPasswordChar = true;
+            this.TextBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxPassword_KeyDown);
             // 
             // button_LOGIN
             // 
@@ -94,6 +95,7 @@
             this.button_LOGIN.Text = "Login";
             this.button_LOGIN.UseVisualStyleBackColor = false;
             this.button_LOGIN.Click += new System.EventHandler(this.button_LOGIN_Click);
+            this.button_LOGIN.Enter += new System.EventHandler(this.button_LOGIN_Enter);
             // 
             // button_CANCEL
             // 

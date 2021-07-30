@@ -105,7 +105,7 @@ namespace OMP_Epupil
 
         private void ButtonPrint_Click(object sender, EventArgs e)
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\students_list.xls";
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\student_list.xls";
 
                 using (var writer = new StreamWriter(path))
                 {
@@ -113,18 +113,20 @@ namespace OMP_Epupil
                     {
                         File.Create(path);
                     }
+                writer.Write("OMP INTERNATIONAL");
+                
 
-                    DateTime bdate;
+                DateTime bdate;
+                         
 
-
-                    for (int i = 0; i < DataGridView1.Rows.Count; i++)
+                for (int i = 0; i < DataGridView1.Rows.Count; i++)
                     {
                         for (int j = 0; j < DataGridView1.Columns.Count - 1; j++)
                         {
                             if (j == 3)
                             {
                                 bdate = Convert.ToDateTime(DataGridView1.Rows[i].Cells[j].Value.ToString()); 
-                                writer.Write("\t" + bdate.ToString("yyyy-MM-dd") + "\t" + "|");
+                                writer.Write("\t" + bdate.ToString("yyyy-MM-dd") + "\t");
                             }
                             else if(j == DataGridView1.Columns.Count - 2)
                             {
@@ -132,10 +134,11 @@ namespace OMP_Epupil
                             }
                             else
                             {
-                                writer.Write("\t" + DataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                                
+                                writer.Write("\t" + DataGridView1.Rows[i].Cells[j].Value.ToString() + "\t");
                             }
                         }
-                        writer.WriteLine("");
+                        writer.WriteLine(" ");
                         writer.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------");
                     }
                     writer.Close();

@@ -32,21 +32,23 @@ namespace OMP_Epupil
             this.Btn_MapSubjectToClass = new System.Windows.Forms.Button();
             this.Btn_MapStudent = new System.Windows.Forms.Button();
             this.DataGridViewStudentsScore = new System.Windows.Forms.GroupBox();
-            this.AddMarks = new System.Windows.Forms.Label();
-            this.RemoveMarks = new System.Windows.Forms.Label();
-            this.Manage_Marks = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DGVMarksList = new System.Windows.Forms.DataGridView();
             this.Lbl_Report = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.Manage_Marks = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.RemoveMarks = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.AddMarks = new System.Windows.Forms.Label();
             this.Remove_Marks = new System.Windows.Forms.Button();
             this.DataGridViewAvgScore = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.DGVMarksList = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_StudentReport = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.DataGridViewStudentsScore.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAvgScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMarksList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAvgScore)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_MapSubjectToClass
@@ -73,6 +75,8 @@ namespace OMP_Epupil
             // 
             // DataGridViewStudentsScore
             // 
+            this.DataGridViewStudentsScore.Controls.Add(this.label3);
+            this.DataGridViewStudentsScore.Controls.Add(this.Btn_StudentReport);
             this.DataGridViewStudentsScore.Controls.Add(this.label2);
             this.DataGridViewStudentsScore.Controls.Add(this.DGVMarksList);
             this.DataGridViewStudentsScore.Controls.Add(this.Lbl_Report);
@@ -91,23 +95,46 @@ namespace OMP_Epupil
             this.DataGridViewStudentsScore.TabStop = false;
             this.DataGridViewStudentsScore.Text = "Manage Marks";
             // 
-            // AddMarks
+            // label2
             // 
-            this.AddMarks.AutoSize = true;
-            this.AddMarks.Location = new System.Drawing.Point(35, 125);
-            this.AddMarks.Name = "AddMarks";
-            this.AddMarks.Size = new System.Drawing.Size(91, 21);
-            this.AddMarks.TabIndex = 4;
-            this.AddMarks.Text = "Add Marks";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(336, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Marks of All Students";
             // 
-            // RemoveMarks
+            // DGVMarksList
             // 
-            this.RemoveMarks.AutoSize = true;
-            this.RemoveMarks.Location = new System.Drawing.Point(168, 125);
-            this.RemoveMarks.Name = "RemoveMarks";
-            this.RemoveMarks.Size = new System.Drawing.Size(122, 21);
-            this.RemoveMarks.TabIndex = 6;
-            this.RemoveMarks.Text = "Remove Marks";
+            this.DGVMarksList.AllowUserToAddRows = false;
+            this.DGVMarksList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVMarksList.BackgroundColor = System.Drawing.Color.AntiqueWhite;
+            this.DGVMarksList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVMarksList.Location = new System.Drawing.Point(39, 202);
+            this.DGVMarksList.Name = "DGVMarksList";
+            this.DGVMarksList.Size = new System.Drawing.Size(773, 370);
+            this.DGVMarksList.TabIndex = 49;
+            // 
+            // Lbl_Report
+            // 
+            this.Lbl_Report.AutoSize = true;
+            this.Lbl_Report.Location = new System.Drawing.Point(682, 125);
+            this.Lbl_Report.Name = "Lbl_Report";
+            this.Lbl_Report.Size = new System.Drawing.Size(111, 21);
+            this.Lbl_Report.TabIndex = 10;
+            this.Lbl_Report.Text = "Marks Report";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::Csharp_student_information_system.Properties.Resources.icons8_business_report_48;
+            this.button3.Location = new System.Drawing.Point(714, 48);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 70);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Manage_Marks
             // 
@@ -117,26 +144,6 @@ namespace OMP_Epupil
             this.Manage_Marks.Size = new System.Drawing.Size(122, 21);
             this.Manage_Marks.TabIndex = 8;
             this.Manage_Marks.Text = "Manage Marks";
-            // 
-            // Lbl_Report
-            // 
-            this.Lbl_Report.AutoSize = true;
-            this.Lbl_Report.Location = new System.Drawing.Point(682, 125);
-            this.Lbl_Report.Name = "Lbl_Report";
-            this.Lbl_Report.Size = new System.Drawing.Size(61, 21);
-            this.Lbl_Report.TabIndex = 10;
-            this.Lbl_Report.Text = "Report";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::Csharp_student_information_system.Properties.Resources.icons8_business_report_48;
-            this.button3.Location = new System.Drawing.Point(686, 48);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 70);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -149,6 +156,15 @@ namespace OMP_Epupil
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // RemoveMarks
+            // 
+            this.RemoveMarks.AutoSize = true;
+            this.RemoveMarks.Location = new System.Drawing.Point(168, 125);
+            this.RemoveMarks.Name = "RemoveMarks";
+            this.RemoveMarks.Size = new System.Drawing.Size(122, 21);
+            this.RemoveMarks.TabIndex = 6;
+            this.RemoveMarks.Text = "Remove Marks";
+            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,6 +175,15 @@ namespace OMP_Epupil
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AddMarks
+            // 
+            this.AddMarks.AutoSize = true;
+            this.AddMarks.Location = new System.Drawing.Point(35, 125);
+            this.AddMarks.Name = "AddMarks";
+            this.AddMarks.Size = new System.Drawing.Size(91, 21);
+            this.AddMarks.TabIndex = 4;
+            this.AddMarks.Text = "Add Marks";
             // 
             // Remove_Marks
             // 
@@ -192,26 +217,25 @@ namespace OMP_Epupil
             this.label1.TabIndex = 48;
             this.label1.Text = "Average Statistics of All Subjects";
             // 
-            // DGVMarksList
+            // Btn_StudentReport
             // 
-            this.DGVMarksList.AllowUserToAddRows = false;
-            this.DGVMarksList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGVMarksList.BackgroundColor = System.Drawing.Color.AntiqueWhite;
-            this.DGVMarksList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVMarksList.Location = new System.Drawing.Point(39, 202);
-            this.DGVMarksList.Name = "DGVMarksList";
-            this.DGVMarksList.Size = new System.Drawing.Size(773, 370);
-            this.DGVMarksList.TabIndex = 49;
+            this.Btn_StudentReport.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_StudentReport.Image = global::Csharp_student_information_system.Properties.Resources.icons8_business_report_48;
+            this.Btn_StudentReport.Location = new System.Drawing.Point(575, 48);
+            this.Btn_StudentReport.Name = "Btn_StudentReport";
+            this.Btn_StudentReport.Size = new System.Drawing.Size(54, 70);
+            this.Btn_StudentReport.TabIndex = 50;
+            this.Btn_StudentReport.UseVisualStyleBackColor = true;
+            this.Btn_StudentReport.Click += new System.EventHandler(this.Btn_StudentReport_Click);
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(336, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Marks of All Students";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(538, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 21);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Student Report";
             // 
             // SubForm
             // 
@@ -229,8 +253,8 @@ namespace OMP_Epupil
             this.Load += new System.EventHandler(this.SubForm_Load);
             this.DataGridViewStudentsScore.ResumeLayout(false);
             this.DataGridViewStudentsScore.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAvgScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVMarksList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewAvgScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +277,7 @@ namespace OMP_Epupil
         internal System.Windows.Forms.DataGridView DataGridViewAvgScore;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.DataGridView DGVMarksList;
+        internal System.Windows.Forms.Button Btn_StudentReport;
+        private System.Windows.Forms.Label label3;
     }
 }

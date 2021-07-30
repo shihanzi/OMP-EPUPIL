@@ -262,6 +262,9 @@ namespace OMP_Epupil
             AdSch.Show();
         }
 
-        
+        private void Btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

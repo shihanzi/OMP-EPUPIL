@@ -44,8 +44,7 @@ namespace OMP_Epupil
             
             if ((table.Rows.Count > 0))
             {
-                // that mean the login informatons are correct -> open the mainform
-                // check out the "Program.cs"
+               
                 string RoleType = table.Rows[0][3].ToString();
 
                 if (RoleType == "admin")
@@ -77,6 +76,19 @@ namespace OMP_Epupil
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_LOGIN_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TextBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_LOGIN_Click(sender, e); 
+            }
         }
     }
 }
