@@ -98,21 +98,16 @@ namespace OMP_Epupil
         }
 
 
-        // method to get student marks
-        public DataTable getStudentsMarks()
+        // method to get sub to class
+        public DataTable getStudToClass()
         {
             SqlCommand command = new SqlCommand();
 
             command.Connection = mydb.getConnection;
-            command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
-
-
+            command.CommandText = ("SELECT * FROM [dbo].[StudToClass]");
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-
             DataTable table = new DataTable();
-
             adapter.Fill(table);
-
             return table;
         }
 
@@ -152,11 +147,11 @@ namespace OMP_Epupil
             return table;
         }
 
-        //  function to get all courses from the database
+        //  function to get all subject from the database
         public DataTable getStudents()
         {
 
-            SqlCommand command = new SqlCommand("SELECT * FROM Students", mydb.getConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM StudToClass", mydb.getConnection);
 
             SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -169,12 +164,12 @@ namespace OMP_Epupil
 
 
         // delete score using student id, and course id
-        public bool deleteMarks(int studentID, int courseID)
+        public bool deleteStudtoClass(int ClassID, int studentID)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[StudToClass] WHERE [ClassId] = @stid AND [studentID] = @suid", mydb.getConnection);
 
-            command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
+            command.Parameters.Add("@stid", SqlDbType.Int).Value = ClassID;
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = studentID;
 
             mydb.openConnection();
 

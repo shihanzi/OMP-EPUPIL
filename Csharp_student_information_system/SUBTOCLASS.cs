@@ -96,21 +96,16 @@ namespace OMP_Epupil
         }
 
 
-        // method to get subject
-        public DataTable getStudentsMarks()
+        // method to get subject to class
+        public DataTable getSubToClass()
         {
             SqlCommand command = new SqlCommand();
 
             command.Connection = mydb.getConnection;
-            command.CommandText = ("SELECT Marks.StudentId, Students.Firstname,Students.Lastname,Marks.SubjectId,Subjects.Name,Marks.Marks FROM ((Marks INNER JOIN Students ON Marks.StudentId = Students.Id)INNER JOIN Subjects ON Marks.SubjectId = Subjects.Id)");
-
-
+            command.CommandText = ("SELECT * FROM [dbo].[SubToClass]");
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-
             DataTable table = new DataTable();
-
             adapter.Fill(table);
-
             return table;
         }
 
@@ -151,13 +146,13 @@ namespace OMP_Epupil
         }
 
 
-        // delete score using student id, and course id
-        public bool deleteMarks(int studentID, int courseID)
+        // remove mapping using class id, and subject id
+        public bool deleteSubToClass(int classID, int subjectID)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[Marks] WHERE [StudentId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
+            SqlCommand command = new SqlCommand("DELETE FROM [dbo].[SubToClass] WHERE [ClassId] = @stid AND [SubjectId] = @suid", mydb.getConnection);
 
-            command.Parameters.Add("@stid", SqlDbType.Int).Value = studentID;
-            command.Parameters.Add("@suid", SqlDbType.Int).Value = courseID;
+            command.Parameters.Add("@stid", SqlDbType.Int).Value = classID;
+            command.Parameters.Add("@suid", SqlDbType.Int).Value = subjectID;
 
             mydb.openConnection();
 

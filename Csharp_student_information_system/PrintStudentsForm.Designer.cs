@@ -30,6 +30,7 @@
         {
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.ButtonPrint = new System.Windows.Forms.Button();
             this.ButtonGO = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.DateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -42,7 +43,6 @@
             this.RadioButtonAll = new System.Windows.Forms.RadioButton();
             this.RadioButtonFemale = new System.Windows.Forms.RadioButton();
             this.RadioButtonMale = new System.Windows.Forms.RadioButton();
-            this.ButtonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,6 +70,21 @@
             this.GroupBox1.Size = new System.Drawing.Size(990, 112);
             this.GroupBox1.TabIndex = 58;
             this.GroupBox1.TabStop = false;
+            // 
+            // ButtonPrint
+            // 
+            this.ButtonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+            this.ButtonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonPrint.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonPrint.ForeColor = System.Drawing.Color.White;
+            this.ButtonPrint.Location = new System.Drawing.Point(728, 25);
+            this.ButtonPrint.Name = "ButtonPrint";
+            this.ButtonPrint.Size = new System.Drawing.Size(123, 65);
+            this.ButtonPrint.TabIndex = 61;
+            this.ButtonPrint.Text = "Export To Excel File";
+            this.ButtonPrint.UseVisualStyleBackColor = false;
+            this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
             // ButtonGO
             // 
@@ -219,21 +234,6 @@
             this.RadioButtonMale.TabIndex = 0;
             this.RadioButtonMale.Text = "Male";
             this.RadioButtonMale.UseVisualStyleBackColor = true;
-            // 
-            // ButtonPrint
-            // 
-            this.ButtonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
-            this.ButtonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonPrint.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonPrint.ForeColor = System.Drawing.Color.White;
-            this.ButtonPrint.Location = new System.Drawing.Point(728, 25);
-            this.ButtonPrint.Name = "ButtonPrint";
-            this.ButtonPrint.Size = new System.Drawing.Size(123, 65);
-            this.ButtonPrint.TabIndex = 61;
-            this.ButtonPrint.Text = "Export To Text File";
-            this.ButtonPrint.UseVisualStyleBackColor = false;
-            this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
             // PrintStudentsForm
             // 

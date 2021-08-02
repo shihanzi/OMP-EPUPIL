@@ -1,6 +1,7 @@
-﻿namespace OMP_Epupil
+﻿
+namespace OMP_Epupil
 {
-    partial class RemoveMarksForm
+    partial class RemoveSubjectToClass
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +29,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataGridViewStudentsScore = new System.Windows.Forms.DataGridView();
+            this.DataGridViewSubToClass = new System.Windows.Forms.DataGridView();
             this.ButtonRemoveMarks = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewStudentsScore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSubToClass)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataGridViewStudentsScore
+            // DataGridViewSubToClass
             // 
-            this.DataGridViewStudentsScore.AllowUserToAddRows = false;
-            this.DataGridViewStudentsScore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewStudentsScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewStudentsScore.Location = new System.Drawing.Point(29, 25);
-            this.DataGridViewStudentsScore.Name = "DataGridViewStudentsScore";
-            this.DataGridViewStudentsScore.Size = new System.Drawing.Size(584, 295);
-            this.DataGridViewStudentsScore.TabIndex = 44;
+            this.DataGridViewSubToClass.AllowUserToAddRows = false;
+            this.DataGridViewSubToClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewSubToClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridViewSubToClass.Location = new System.Drawing.Point(22, 12);
+            this.DataGridViewSubToClass.Name = "DataGridViewSubToClass";
+            this.DataGridViewSubToClass.Size = new System.Drawing.Size(610, 318);
+            this.DataGridViewSubToClass.TabIndex = 46;
             // 
             // ButtonRemoveMarks
             // 
@@ -50,34 +51,33 @@
             this.ButtonRemoveMarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonRemoveMarks.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonRemoveMarks.ForeColor = System.Drawing.Color.White;
-            this.ButtonRemoveMarks.Location = new System.Drawing.Point(29, 326);
+            this.ButtonRemoveMarks.Location = new System.Drawing.Point(22, 336);
             this.ButtonRemoveMarks.Name = "ButtonRemoveMarks";
-            this.ButtonRemoveMarks.Size = new System.Drawing.Size(584, 40);
-            this.ButtonRemoveMarks.TabIndex = 43;
-            this.ButtonRemoveMarks.Text = "Remove Marks";
+            this.ButtonRemoveMarks.Size = new System.Drawing.Size(610, 40);
+            this.ButtonRemoveMarks.TabIndex = 45;
+            this.ButtonRemoveMarks.Text = "Remove Subject";
             this.ButtonRemoveMarks.UseVisualStyleBackColor = false;
-            this.ButtonRemoveMarks.Click += new System.EventHandler(this.ButtonRemoveScore_Click);
+            this.ButtonRemoveMarks.Click += new System.EventHandler(this.ButtonRemoveMarks_Click);
             // 
-            // RemoveMarksForm
+            // RemoveSubjectToClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(68)))), ((int)(((byte)(173)))));
-            this.ClientSize = new System.Drawing.Size(642, 391);
-            this.Controls.Add(this.DataGridViewStudentsScore);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(655, 399);
+            this.Controls.Add(this.DataGridViewSubToClass);
             this.Controls.Add(this.ButtonRemoveMarks);
-            this.Name = "RemoveMarksForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemoveScoreForm";
-            this.Load += new System.EventHandler(this.RemoveScoreForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewStudentsScore)).EndInit();
+            this.Name = "RemoveSubjectToClass";
+            this.Text = "RemoveSubjectToClass";
+            this.Load += new System.EventHandler(this.RemoveSubjectToClass_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSubToClass)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal System.Windows.Forms.DataGridView DataGridViewStudentsScore;
+        internal System.Windows.Forms.DataGridView DataGridViewSubToClass;
         internal System.Windows.Forms.Button ButtonRemoveMarks;
     }
 }

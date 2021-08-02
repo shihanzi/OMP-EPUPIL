@@ -127,6 +127,18 @@
     <Compile Include="RemoveClassForm.Designer.cs">
       <DependentUpon>RemoveClassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RemoveStudFromClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveStudFromClass.Designer.cs">
+      <DependentUpon>RemoveStudFromClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveSubjectToClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveSubjectToClass.Designer.cs">
+      <DependentUpon>RemoveSubjectToClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="SCHOOL.cs" />
     <Compile Include="STAFF.cs" />
     <Compile Include="staffListForm.cs">
@@ -317,11 +329,17 @@
     <EmbeddedResource Include="RemoveClassForm.resx">
       <DependentUpon>RemoveClassForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemoveStudFromClass.resx">
+      <DependentUpon>RemoveStudFromClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoveSubjectForm.resx">
       <DependentUpon>RemoveSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveMarksForm.resx">
       <DependentUpon>RemoveMarksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveSubjectToClass.resx">
+      <DependentUpon>RemoveSubjectToClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="staffListForm.resx">
       <DependentUpon>staffListForm.cs</DependentUpon>
@@ -388,6 +406,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\user.png" />
+    <None Include="Resources\icons8-business-report-30.png" />
     <None Include="Resources\591523aa486442dfba8df4eeb8944fcb.png" />
     <None Include="Resources\icons8-class-50.png" />
     <None Include="Resources\icons8-delete-bin-24.png" />

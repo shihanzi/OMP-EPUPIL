@@ -145,7 +145,7 @@
             this.Label1.TabIndex = 25;
             this.Label1.Text = "Select Course:";
             // 
-            // EditCourseForm
+            // EditSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,9 +160,9 @@
             this.Controls.Add(this.NumericUpDownHours);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
-            this.Name = "EditCourseForm";
+            this.Name = "EditSubjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditCourseForm";
+            this.Text = "EditSubjectForm";
             this.Load += new System.EventHandler(this.EditCourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDownHours)).EndInit();
             this.ResumeLayout(false);

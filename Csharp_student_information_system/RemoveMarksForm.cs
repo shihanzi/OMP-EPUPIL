@@ -34,23 +34,23 @@ namespace OMP_Epupil
         }
 
 
-        // button remove score by student_id and course_id
+        // button remove score by student_id and marks_id
         private void ButtonRemoveScore_Click(object sender, EventArgs e)
         {
 
             int studentID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[0].Value.ToString());
             int subjectID = int.Parse(DataGridViewStudentsScore.CurrentRow.Cells[3].Value.ToString());
 
-            if ( MessageBox.Show("Do You Want To Delete This Score", "Delete Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
+            if ( MessageBox.Show("Do You Want To Delete This Marks", "Marks Score", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes )
             {
                 if (score.deleteMarks(studentID, subjectID))
                 {
-                    MessageBox.Show("Score Deleted", "Delete Score", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Marks Deleted", "Delete Marks", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DataGridViewStudentsScore.DataSource = score.getStudentsMarks();
                 }
                 else
                 {
-                    MessageBox.Show("Score Not Deleted", "Delete Score",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Marks Not Deleted", "Delete Marks", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
 
             }

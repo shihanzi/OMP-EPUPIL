@@ -65,5 +65,17 @@ namespace OMP_Epupil
             PrintStudentsForm PrintSF = new PrintStudentsForm();
             PrintSF.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            RemoveSubjectToClass RSToClas = new RemoveSubjectToClass();
+            RSToClas.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RemoveStudFromClass RSFromC = new RemoveStudFromClass();
+            RSFromC.Show();
+        }
     }
 }

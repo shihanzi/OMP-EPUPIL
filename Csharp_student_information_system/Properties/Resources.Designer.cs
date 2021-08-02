@@ -83,6 +83,16 @@ namespace Csharp_student_information_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_business_report_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-business-report-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_business_report_30__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-business-report-30 (1)", resourceCulture);
