@@ -45,11 +45,22 @@ namespace OMP_Epupil
         // function to get all students from database
         public DataTable getStudents(SqlCommand command)
         {
-            command.Connection = mydb.getConnection;
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            return table;
+            try
+            {
+                command.Connection = mydb.getConnection;
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {
+
+                Ex.Print(ex);
+                return null;
+            }
+
+            
         }
 
          // function to get all students from database

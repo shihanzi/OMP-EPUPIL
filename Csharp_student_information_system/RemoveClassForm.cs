@@ -119,6 +119,11 @@ namespace OMP_Epupil
             }
 
         }
+
+        private void UpdateRemoveClassForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

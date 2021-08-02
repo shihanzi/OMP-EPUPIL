@@ -101,7 +101,7 @@
             // Edit_Staff
             // 
             this.Edit_Staff.AutoSize = true;
-            this.Edit_Staff.Location = new System.Drawing.Point(210, 182);
+            this.Edit_Staff.Location = new System.Drawing.Point(173, 182);
             this.Edit_Staff.Name = "Edit_Staff";
             this.Edit_Staff.Size = new System.Drawing.Size(74, 19);
             this.Edit_Staff.TabIndex = 12;
@@ -122,7 +122,7 @@
             // 
             this.Btn_EditStaff.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_EditStaff.Image = global::Csharp_student_information_system.Properties.Resources.icons8_edit_profile_30;
-            this.Btn_EditStaff.Location = new System.Drawing.Point(218, 107);
+            this.Btn_EditStaff.Location = new System.Drawing.Point(184, 108);
             this.Btn_EditStaff.Name = "Btn_EditStaff";
             this.Btn_EditStaff.Size = new System.Drawing.Size(54, 70);
             this.Btn_EditStaff.TabIndex = 10;

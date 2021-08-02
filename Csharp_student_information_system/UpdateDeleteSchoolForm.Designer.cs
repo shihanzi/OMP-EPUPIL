@@ -193,6 +193,7 @@ namespace OMP_Epupil
             this.Dgv_SchoolDetails.Name = "Dgv_SchoolDetails";
             this.Dgv_SchoolDetails.Size = new System.Drawing.Size(883, 75);
             this.Dgv_SchoolDetails.TabIndex = 14;
+            this.Dgv_SchoolDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_SchoolDetails_CellClick);
             this.Dgv_SchoolDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Btn_SchoolRefresh
@@ -247,16 +248,16 @@ namespace OMP_Epupil
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_SchhoolName;
-        private System.Windows.Forms.TextBox txt_SchhoolAddress;
-        private System.Windows.Forms.TextBox txt_SchhoolPhone;
-        private System.Windows.Forms.TextBox txt_SchhoolWeb;
-        private System.Windows.Forms.TextBox txt_SchhoolMail;
-        private System.Windows.Forms.Button Btn_SchoolUpdate;
         private Student_DBDataSet student_DBDataSet;
         private System.Windows.Forms.BindingSource schoolBindingSource;
         private Student_DBDataSetTableAdapters.SchoolTableAdapter schoolTableAdapter;
-        private System.Windows.Forms.DataGridView Dgv_SchoolDetails;
-        private System.Windows.Forms.Button Btn_SchoolRefresh;
+        internal System.Windows.Forms.TextBox txt_SchhoolName;
+        internal System.Windows.Forms.TextBox txt_SchhoolAddress;
+        internal System.Windows.Forms.TextBox txt_SchhoolPhone;
+        internal System.Windows.Forms.TextBox txt_SchhoolWeb;
+        internal System.Windows.Forms.TextBox txt_SchhoolMail;
+        internal System.Windows.Forms.Button Btn_SchoolUpdate;
+        internal System.Windows.Forms.DataGridView Dgv_SchoolDetails;
+        internal System.Windows.Forms.Button Btn_SchoolRefresh;
     }
 }

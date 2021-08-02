@@ -96,6 +96,7 @@
     <Compile Include="AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ex.cs" />
     <Compile Include="MapStudentToClass.cs">
       <SubType>Form</SubType>
     </Compile>

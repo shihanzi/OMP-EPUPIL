@@ -40,6 +40,8 @@ namespace OMP_Epupil
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Dgv_RemoveClass = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_RemoveClass)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonRemoveClass
@@ -164,12 +166,21 @@ namespace OMP_Epupil
             this.label4.TabIndex = 60;
             this.label4.Text = "Class:";
             // 
+            // Dgv_RemoveClass
+            // 
+            this.Dgv_RemoveClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_RemoveClass.Location = new System.Drawing.Point(544, 35);
+            this.Dgv_RemoveClass.Name = "Dgv_RemoveClass";
+            this.Dgv_RemoveClass.Size = new System.Drawing.Size(444, 262);
+            this.Dgv_RemoveClass.TabIndex = 66;
+            // 
             // UpdateRemoveClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(564, 320);
+            this.ClientSize = new System.Drawing.Size(1000, 324);
+            this.Controls.Add(this.Dgv_RemoveClass);
             this.Controls.Add(this.TextBoxDescription);
             this.Controls.Add(this.TextBoxSection);
             this.Controls.Add(this.TextBoxClassName);
@@ -183,6 +194,8 @@ namespace OMP_Epupil
             this.Controls.Add(this.Label1);
             this.Name = "UpdateRemoveClassForm";
             this.Text = "RemoveClassForm";
+            this.Load += new System.EventHandler(this.UpdateRemoveClassForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_RemoveClass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +214,6 @@ namespace OMP_Epupil
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView Dgv_RemoveClass;
     }
 }

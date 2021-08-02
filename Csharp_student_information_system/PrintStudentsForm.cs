@@ -77,7 +77,7 @@ namespace OMP_Epupil
                 }
                 else
                 {
-                    query = "SELECT * [dbo].[Students] WHERE [DOB] BETWEEN '" + date1 + "' AND '" + date2 + "'" ;
+                    query = "SELECT * FROM [dbo].[Students] WHERE [DOB] BETWEEN '" + date1 + "' AND '" + date2 + "'" ;
                 }
 
                 command = new SqlCommand(query);

@@ -69,7 +69,7 @@ namespace OMP_Epupil
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Edit School ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(ex.Message, "Edit School", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -88,13 +88,20 @@ namespace OMP_Epupil
             Dgv_SchoolDetails.DataSource = school.getSchoolDetails(command);
             Dgv_SchoolDetails.AllowUserToAddRows = false;
 
-            
-            
+            this.Dgv_SchoolDetails.Columns["id"].Visible = false;
+
+
+
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            txt_SchhoolName.Text = Dgv_SchoolDetails.CurrentRow.Cells[2].Value.ToString();
+            txt_SchhoolAddress.Text = Dgv_SchoolDetails.CurrentRow.Cells[3].Value.ToString();
+            txt_SchhoolPhone.Text = Dgv_SchoolDetails.CurrentRow.Cells[4].Value.ToString();
+            txt_SchhoolWeb.Text = Dgv_SchoolDetails.CurrentRow.Cells[5].Value.ToString();
+            txt_SchhoolMail.Text = Dgv_SchoolDetails.CurrentRow.Cells[6].Value.ToString();
 
         }
         // Refresh School gridview
@@ -106,6 +113,11 @@ namespace OMP_Epupil
             Dgv_SchoolDetails.RowTemplate.Height = 80;
             Dgv_SchoolDetails.DataSource = school.getSchoolDetails(command);
              Dgv_SchoolDetails.AllowUserToAddRows = false;
+        }
+
+        private void Dgv_SchoolDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+             
         }
     }
 }

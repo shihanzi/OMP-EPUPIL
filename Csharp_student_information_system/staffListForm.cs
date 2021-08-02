@@ -41,14 +41,22 @@ namespace OMP_Epupil
 
         private void staffListForm_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Staffs]");
-            Dgv_StaffList.ReadOnly = true;
-            DataGridViewImageColumn picCol = new DataGridViewImageColumn();
-            Dgv_StaffList.RowTemplate.Height = 80;
-            Dgv_StaffList.DataSource = staff.getStaffs(command);
-            picCol = (DataGridViewImageColumn)Dgv_StaffList.Columns[8];
-            picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
-            Dgv_StaffList.AllowUserToAddRows = false;
+            try
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Staffs]");
+                Dgv_StaffList.ReadOnly = true;
+                DataGridViewImageColumn picCol = new DataGridViewImageColumn();
+                Dgv_StaffList.RowTemplate.Height = 80;
+                Dgv_StaffList.DataSource = staff.getStaffs(command);
+                picCol = (DataGridViewImageColumn)Dgv_StaffList.Columns[8];
+                picCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                Dgv_StaffList.AllowUserToAddRows = false;
+            }
+            catch (Exception ex)
+            {
+                Ex.Print(ex);
+            }
+
         }
 
         private void Dgv_StaffList_CellContentClick(object sender, DataGridViewCellEventArgs e)
