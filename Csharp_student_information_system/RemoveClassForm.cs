@@ -122,7 +122,20 @@ namespace OMP_Epupil
 
         private void UpdateRemoveClassForm_Load(object sender, EventArgs e)
         {
+            SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[OMPClass]");
+            Dgv_RemoveClass.ReadOnly = true;
+            Dgv_RemoveClass.DataSource = ompclass.getClassById(command);
+            Dgv_RemoveClass.AllowUserToAddRows = false;
+            this.Dgv_RemoveClass.Columns["id"].Visible = false;
+        }
 
+        private void Dgv_RemoveClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TextBoxClassID.Text = Dgv_RemoveClass.CurrentRow.Cells[0].Value.ToString();
+            TextBoxClassName.Text = Dgv_RemoveClass.CurrentRow.Cells[1].Value.ToString();
+            TextBoxSection.Text = Dgv_RemoveClass.CurrentRow.Cells[2].Value.ToString();
+            TextBoxDescription.Text = Dgv_RemoveClass.CurrentRow.Cells[3].Value.ToString();
+            
         }
     }
 }

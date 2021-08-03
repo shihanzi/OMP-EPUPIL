@@ -173,6 +173,7 @@ namespace OMP_Epupil
             this.Dgv_RemoveClass.Name = "Dgv_RemoveClass";
             this.Dgv_RemoveClass.Size = new System.Drawing.Size(444, 262);
             this.Dgv_RemoveClass.TabIndex = 66;
+            this.Dgv_RemoveClass.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_RemoveClass_CellContentClick);
             // 
             // UpdateRemoveClassForm
             // 
